@@ -1,0 +1,9 @@
+.sass-cache
+*.css.map
+.DS_Store
+node_modules/
+test
+/bin
+/obj
+/Properties
+.norma

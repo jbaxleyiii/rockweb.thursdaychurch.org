@@ -1,0 +1,11 @@
+/* Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+.menu-dropdown a.level1,
+.menu-dropdown span.level1,
+.menu-line a.level1
+ { font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif; }
+
+.menu-dropdown a.level1 > span, 
+.menu-dropdown span.level1 > span,
+.menu-line a.level1
+ {font-size: 13px}

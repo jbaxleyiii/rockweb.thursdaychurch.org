@@ -1,0 +1,354 @@
+/* Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+@import url(../warp/css/rtl.css);
+
+
+/* Layout
+----------------------------------------------------------------------------------------------------*/
+
+#totop-scroller {
+	right: auto;
+	left: 0;
+}
+
+#cntdwn dd {
+	margin-left: 0;
+	margin-right: 10px;
+	text-align: left;
+}
+
+#cntdwn dl{
+	float: right;
+}
+
+#toolbar .uk-float-left .module, 
+#toolbar .uk-float-right .module, 
+#toolbar .uk-float-left > time, 
+.uk-float-right > li span, 
+.uk-float-left > li span {
+	margin: 0 0 0 15px;
+}
+
+#sidebar-a {
+	background-position: 0 0;
+}
+
+#sidebar-b {
+	background-position: 100% 0;
+}
+
+img.thumb {
+	margin: 0 0 10px 15px !important;
+}
+
+.event-time, .block-number {
+	float: right;
+	margin: 2px 0 5px 15px;
+}
+
+.tag-body,
+a.tag-body,
+.tagspopular ul li a,
+ul.sprocket-mosaic-tags li {
+	margin: 10px 0 0 10px;
+}
+
+.acyfield_email input[type="text"] {
+	float: right;
+}
+
+/* Menus
+----------------------------------------------------------------------------------------------------*/
+
+/* Mega Drop-Down Menu */
+.menu-dropdown li.level1 {
+	margin-right: 0;
+	margin-left: 10px;
+}
+
+.menu-dropdown .level1 .level1 span.icon {
+	margin-left: 0;
+	margin-right: -5px;
+}
+.menu-dropdown .level1 .level1 span.icon + span,
+.menu-dropdown .level1 .level1 span.icon + span + span {
+	margin-left: 0;
+	margin-right: 25px;
+}
+
+.menu-dropdown li.level2 .level2 span.icon {
+	margin-right: 0;
+	margin-left: 4px;
+}
+
+.menu-dropdown li.level2 .level2 span.icon + span,
+.menu-dropdown li.level2 .level2 span.icon + span + span {
+	margin-left: 0;
+	margin-right: 39px;
+}
+
+.menu-sidebar a.level1 > span:before, 
+.menu-sidebar span.level1 > span:before {
+	float: left;
+}
+
+/* ice mega-menu */
+.icemegamenu > ul > li {
+	float: right;
+}
+
+ul.icesubMenu > li a.iceMenuTitle {
+	padding: 0 16px 0 0;
+}
+
+ul.icesubMenu li.parent > a:before {
+	content: "\f104";
+	float: left;
+}
+
+ul.sub_level_2, 
+ul.sub_level_3, 
+ul.sub_level_4, 
+ul.sub_level_5 {
+	right: 100%;
+}
+
+/* Sidebar/Accordion Menu */
+.menu-sidebar ul.level2 ul {
+	padding-left: 0;
+	padding-right: 10px;
+}
+
+.menu-sidebar span.icon {
+	margin-right: 0;
+	margin-left: 4px;
+}
+
+/* Line Menu */
+.menu-line li {
+	margin-left: 0;
+	padding-left: 0;
+	margin-right: 7px;
+	padding-right: 8px;
+	background-position: 100% 50%;
+}
+
+.menu-line li:first-child {
+	margin-right: 0;
+	padding-right: 0;
+}
+
+.colored .menu-sidebar a.level1:before,
+.colored .menu-sidebar span.level1:before {
+	margin: -10px -16px 0 0
+}
+
+#offcanvas .canvas-menu a.level3,
+#offcanvas .canvas-menu span.level3 {
+	padding: 5px 30px 5px 0;
+}
+
+#offcanvas .canvas-menu a.level4,
+#offcanvas .canvas-menu span.level4 {
+	padding: 5px 40px 5px 0;
+}
+
+
+/* Modules
+----------------------------------------------------------------------------------------------------*/
+
+.mod-box .badge {
+	right: auto;
+	left: -1px;
+}
+
+
+/* Tools
+----------------------------------------------------------------------------------------------------*/
+
+/* Check List */
+ul.check > li {
+	padding-left: 0;
+	padding-right: 30px;
+	background-position: 100% 0;
+}
+
+/* Definition Lists */
+dl.separator dd { border-width: 0 1px 0 0; }
+
+dl.separator dt:before {
+	right: auto;
+	left: -15px;
+}
+
+dl.separator dt:after {
+	right: auto;
+	left: -3px;
+}
+
+
+/* System
+----------------------------------------------------------------------------------------------------*/
+
+/* Search Box */
+#searchbox { background-position: 100% 50%; }
+
+#searchbox .results {
+	right: auto;
+	left: -1px;
+}
+
+/* Breadcrumbs */
+.breadcrumbs a,
+.breadcrumbs > span {
+	padding-right: 0;
+}
+
+.breadcrumbs i {padding: 0 0 0 10px;}
+
+.showhide li .toggle-button {
+	float: right;
+}
+
+
+/*Widgetkit*/
+.wk-slideshow-home > div .next {
+	left: 20px;
+	right: auto;
+}
+
+.wk-slideshow-home .prev {
+	right: auto !important;
+	left: 56px;
+}
+
+.wk-slideshow-home .caption,
+.layout-slideshow .sprocket-features-content {
+	text-align: right;
+	margin-right: 0;
+}
+
+.wk-slideshow-home .caption h2,
+.wk-slideshow-home .caption p,
+.sprocket-features-desc .title,
+.layout-slideshow .sprocket-features-title,
+.sprocket-features-desc .desc,
+.wk-slideshow-home span.title {
+	-webkit-border-radius: 3px 0 0 3px;
+	   -moz-border-radius: 3px 0 0 3px;
+			border-radius: 3px 0 0 3px;
+}
+
+.wk-slideshow-home .nav {
+	right: auto;
+	left: 5px;
+}
+
+.wk-slideshow-home .nav li:first-child {
+	margin-right: 0;
+}
+
+.wk-slideshow-home .nav li {
+	margin: 5px 5px 0 2px;
+}
+
+/* k2 */
+.uk-blog-date {
+	float: left;
+}
+
+.k2CategoriesListBlock li a {
+	float: right;
+	margin: 5px 0 5px 10px
+}
+
+.k2Avatar {
+	margin: 3px 0 0 12px;
+}
+
+.itemBottom .itemRatingBlock span,
+.itemBottom .itemRatingBlock .itemRatingList,
+.itemBottom .itemRatingBlock .itemRatingForm ul.itemRatingList li,
+.itemLinks .itemCategory span,
+.itemLinks .itemAttachmentsBlock > span,
+.itemExtraFields ul li span.itemExtraFieldsLabel,
+.itemLinks .itemTagsBlock span,
+.itemLinks .itemTagsBlock ul li,
+.latestView .itemsContainer,
+.itemComments .itemCommentsList li > span.gkAvatar,
+.itemAuthorContent div,
+.itemCommentsForm textarea, .itemCommentsForm .inputbox,
+#k2Container header ul li,
+.k2CategoriesListBlock li a,
+.k2Avatar,
+.itemList ul.itemTags li,
+.itemCommentsForm label,
+.itemAuthorBlock > .gkAvatar {
+	float: right
+}
+
+div .k2ItemsBlock ul li {
+	padding: 12px 0 12px 20px !important;
+}
+
+.itemAuthorBlock .itemAuthorDetails {
+	margin: 0 130px 0 0;
+}
+
+.itemAuthorContent div {
+	margin-right: auto;
+	margin-left: 4%;
+}
+
+.itemComments .itemCommentsList li > span.gkAvatar {
+	margin: 14px 0 0 12px
+}
+
+.itemCommentsList {
+	padding: 0
+}
+
+.itemComments .itemCommentsList li > div {
+	margin: 0 82px 0 0
+}
+
+#k2Container header ul li {
+	margin: 0 0 0 10px
+}
+
+.itemLinks .itemTagsBlock ul {
+	margin: 0 13% 0 0;
+}
+
+.itemTags {
+	padding: 0 4px 0 0 !important;
+}
+
+.itemRatingList a, 
+.itemRatingList .itemCurrentRating {
+	right: 0;
+}
+
+.itemExtraFieldsLabel {
+	margin-right: 0;
+	margin-left: 100px;
+}
+
+div .k2ItemsBlock ul {
+	padding-right: 0;
+}
+
+.itemRatingList,
+.itemRatingLog {
+	float: right;
+}
+
+.itemTags li {
+	margin-right: 0;
+	margin-left: 5px;
+}
+
+.k2FeedIcon a, a.k2FeedIcon {
+	float: left;
+	padding: 10px 32px 0 0;
+}

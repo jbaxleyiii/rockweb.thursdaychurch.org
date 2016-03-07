@@ -1,0 +1,18 @@
+/* Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+body, select, input, textarea, button, .menu-sidebar a, .menu-sidebar li > span, h3.title > p { 
+	font-family: 'Lato', sans-serif;
+	line-height: 26px;
+	font-weight: 300;
+	font-size: 15px;
+}
+
+.uk-tab > li > a {
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+}
+
+.mod-fine .module-title{
+	font-family: 'Lato', sans-serif;
+	font-weight: 100;
+}

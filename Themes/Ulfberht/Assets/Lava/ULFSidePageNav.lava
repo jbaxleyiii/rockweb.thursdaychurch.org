@@ -1,0 +1,23 @@
+
+{% if Page.DisplayChildPages == 'true' and Page.Pages != empty %}
+    <nav class="sidebar-nav">
+		<ul>
+			<li>
+				<a href="#" class="active">{{Page.Title }}</a>
+			{% for childPage in Page.Pages %}
+				<ul class="ULFside-nav">{% if childPage.DisplayChildPages != 'true' or childPage.Pages == empty %}
+					<a href="{{ childPage.Url }}">{{ childPage.Title }}</a>
+					{% else %}
+						<a href="#">{{ childPage.Title }} <i class="fa-nav fa fa-chevron-down fa-lg"></i></a>
+						<li><a href="{{ childPage.Url }}">{{ childPage.Title }} (link)</a></li>
+							{% for subchildPage in childPage.Pages %}
+								<li><a href="{{ subchildPage.Url }}">{{ subchildPage.Title }}</a>
+								</li> 
+							{% endfor %}
+					{% endif %}
+				</ul>
+			{% endfor %}
+			</li>
+		</ul>
+	</nav>
+{% endif %}

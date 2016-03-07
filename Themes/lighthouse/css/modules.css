@@ -1,0 +1,346 @@
+/* Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+@import url(../warp/css/modules.css);
+
+
+/* Module Badges
+----------------------------------------------------------------------------------------------------*/
+
+.module .uk-badge {
+    position: absolute;
+    top: 25px;
+    right: 10px;
+}
+
+#sidebar-a .module .module-title .icon, 
+#sidebar-b .module .module-title .icon{
+    top: 7px;
+}
+
+/* Module Icons
+----------------------------------------------------------------------------------------------------*/
+
+.module .module-title .icon{
+    top: 3px;
+    font-size: 20px;
+}
+
+.module-icon{
+    font-size: 22px;
+    margin: 10px 10px 0 0;
+}
+
+.wk-twitter-single .content{
+   font-size: 17px;
+    line-height: 27px;
+}
+
+.wk-twitter-single p {
+    font-style: normal;
+}
+
+.no-margin{
+    margin: 0 !important;
+    border-radius: 0 !important;
+}
+
+.width35 {
+    width: 35%;
+}
+
+.underline {
+    padding-bottom: 10px;
+    margin-bottom: 10px !important;
+}
+
+/* Search module
+----------------------------------------------------------------------------------------------------*/
+.searchbox{
+    background-color: rgba(0, 0, 0, 0.4); 
+    border: 1px solid rgba(0,0,0, 0.2);
+    -webkit-box-shadow: 0 0 2px rgba(0,0,0,.2) inset, 1px 1px 0 rgba(255,255,255, .05);
+       -moz-box-shadow: 0 0 2px rgba(0,0,0,.2) inset, 1px 1px 0 rgba(255,255,255, .05);
+            box-shadow: 0 0 2px rgba(0,0,0,.2) inset, 1px 1px 0 rgba(255,255,255, .05);
+
+}
+.searchbox:hover{background-color: rgba(0, 0, 0, 0.3);}
+.searchbox:focus{background-color: rgba(0, 0, 0, 0.05);}
+
+.searchbox{
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.searchbox .results,
+.searchbox{
+    -webkit-box-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
+       -moz-box-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
+            box-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.searchbox.loading .uk-icon-times:before {
+    content: "";
+}
+
+.searchbox.loading .uk-icon-times {
+    -webkit-animation: uk-rotate 2s infinite linear;
+            animation: uk-rotate 2s infinite linear;
+}
+.searchbox.loading .uk-icon-times:before{
+    content: "\f110";
+}
+
+
+/* Module Type: Box
+----------------------------------------------------------------------------------------------------*/
+#system .item > .links{
+    text-align: left
+}
+
+.mod-box {
+	padding: 15px 10px;
+}
+#sidebar-a .mod-box,
+#sidebar-b .mod-box {
+    padding: 5px 10px;
+}
+
+.mod-box .badge { 
+    top: 15px; 
+    right: 19px;
+}
+.mod-box.slogan{padding: 5px 10px}
+
+#top-b .module-title, 
+#innerbottom .module-title,
+#innertop .module-title,
+#bottom-a .module-title, 
+#bottom-b .module-title{
+    background: none;
+    border-bottom: 5px solid rgba(0,0,0,0.15);
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.075);
+       -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.075);
+            box-shadow: 0 1px 0 rgba(255, 255, 255, 0.075);
+}
+
+#bottom-block{
+    border-top: 1px solid rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.25) inset;
+       -moz-box-shadow: 0 1px 0 rgba(255,255,255,0.25) inset;
+            box-shadow: 0 1px 0 rgba(255,255,255,0.25) inset;
+}
+
+/* Module Type: styled modules
+----------------------------------------------------------------------------------------------------*/
+
+.mod-color, .mod-white, .mod-dark{
+    border-radius: 4px;
+}
+
+.mod-color p, .mod-white p, .mod-dark p {margin: 5px;}
+.color-content{
+    padding: 0; 
+    overflow: hidden; 
+    position: relative; 
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px; 
+    border-radius: 5px;
+}
+
+.color-content p, .color-content h3{padding: 12px 15px 10px}
+.color-content .button{margin: 10px 1px 4px 0;}
+.mod-color{
+    text-shadow: none; 
+    background-repeat: repeat;
+    background-position: 0 0;
+}
+
+.mod-color, .mod-white, .mod-dark{
+    margin: 20px 15px;
+    overflow: hidden;
+}
+
+.mod-white{
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.mod-dark{
+    background: #404040; 
+    color: #f0f0f0;
+}
+
+.mod-dark h3{
+    color: #FFFFFF !important;
+}
+.mod-dark h3 strong{
+    color: #808080 !important;
+}
+
+
+/*sidebar a*/
+.module-title,
+#content h3.module-title,
+#system h1.title,
+#system h2.title {
+    line-height: 38px;
+    padding: 0 0 5px 0;
+    margin-left: 0;
+    background: url(../images/body/mod-dot.png) repeat-x scroll center bottom transparent;
+}
+
+#top-a .module-title,
+#bottom-c .module-title,
+#showcase .module-title{
+    background: none;
+}
+
+#top-a .module-title,
+#bottom-c .module-title{
+    color: #FFF;
+    background: none;
+    border-bottom: 5px solid rgba(0,0,0,0.15);
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.075);
+       -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.075);
+            box-shadow: 0 1px 0 rgba(255, 255, 255, 0.075);
+}
+
+.module-title, #content h3.module-title{
+    white-space: pre-wrap;
+}
+
+#content h3.module-title {
+    margin: 0 0 9px;
+    padding: 5px 0 5px !important;
+}
+
+#content header {
+    padding-bottom: 2px;
+    padding-top: 15px;
+    margin-left: 0;
+    margin-bottom: 15px;
+}
+
+#content .yoo-zoo header{
+    margin-left: 0;
+    background: url(../images/body/mod-dot.png) repeat-x scroll 0 100% transparent; 
+}
+
+/*title*/
+#system .item h3{
+    padding-bottom: 15px;
+}
+
+#system .title{
+	padding-left: 0;
+}
+
+#system .width50 .title{
+    padding-left: 0;
+}
+
+#system h1.title{
+    padding-left: 0; 
+    padding-bottom: 13px;
+    line-height: 50px;
+}
+
+.yoo-zoo h1.title{
+    background: none !important;
+    padding-bottom: 0 !important;
+}
+
+#system .contact-head{
+    margin-top: -25px;
+}
+
+#system .contact-head h3{
+    padding-bottom: 0;
+}
+
+#acyarchivelisting table {border: 0 none;}
+input.subbutton{
+    padding-top: 5px;
+    margin-top: 1px;
+}
+
+div.responseContainer{
+    background-color: transparent;
+    color: #FFF;
+    padding: 0 !important;
+    margin: 0 !important;
+    position: relative;
+    display: block;
+    top: 22px;
+    left: 11px;
+    height: 0 !important;
+}
+
+.section-title {
+    border-radius: 4px 0 0 0;
+    font-size: 24px;
+    height: 38px;
+    margin-left: 1px !important;
+    margin-top: 1px;
+    padding: 21px 18px 0;
+    text-shadow: none;
+}
+
+.module .module-title span.subtitle {
+    margin-top: -3px;
+    margin-bottom: 7px;
+}
+
+/*newsletter*/
+.acymailing_introtext{
+    position: relative;
+}
+
+.postcontent-title .t {
+    line-height: 45px;
+    padding: 0 0 10px 20px;
+    white-space: pre-wrap;
+}
+
+#bottom-c{
+    margin: 0;
+    padding: 0;
+    border-top: 7px solid rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.1) inset;
+       -moz-box-shadow: 0 1px 0 rgba(255,255,255,0.1) inset;
+            box-shadow: 0 1px 0 rgba(255,255,255,0.1) inset;
+}
+
+.footer-body{
+    position:relative; text-shadow: none; display: table; width: 100%;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 0 0 5px 5px;
+    -webkit-box-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1), 0 -4px 10px rgba(0, 0, 0, 0.3) inset;
+       -moz-box-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1), 0 -4px 10px rgba(0, 0, 0, 0.3) inset;
+            box-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1), 0 -4px 10px rgba(0, 0, 0, 0.3) inset;
+}
+
+.footer-overlay-bottom .overlay-shadow{
+    background: url(../images/body/footer-shadow.png) no-repeat scroll 100% 100% transparent; 
+    height: 44px; 
+    margin-top: -22px; 
+    max-width: 100%
+}
+
+#system #comments .comment-head .author{
+    font-weight: normal;
+}
+
+/*google maps*/
+#g-map {
+    overflow: hidden;
+    position: relative;
+}
+
+/*login module overrides*/
+form.short div.button {
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 10px 0;
+}

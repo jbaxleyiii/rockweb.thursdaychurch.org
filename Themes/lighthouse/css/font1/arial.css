@@ -1,0 +1,6 @@
+/* Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+body, select, input, textarea, button, .menu-sidebar a, .menu-sidebar li > span, h3.title > p { 
+	font-family: Arial, sans-serif;
+	line-height: 26px;
+}

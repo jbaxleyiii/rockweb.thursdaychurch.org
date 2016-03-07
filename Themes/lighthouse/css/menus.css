@@ -1,0 +1,507 @@
+/* Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+@import url(../warp/css/menus.css);
+
+
+/* Mega Drop-Down Menu
+----------------------------------------------------------------------------------------------------*/
+
+#hmenu {
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset, 0 10px 40px rgba(255, 255, 255, 0.035) inset;
+	   -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset, 0 10px 40px rgba(255, 255, 255, 0.035) inset;
+	        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset, 0 10px 40px rgba(255, 255, 255, 0.035) inset;
+}
+
+/* Level 1 */
+.menu-dropdown li.level1 {
+	margin: 0;
+	border-left: 1px solid rgba(255, 255, 255, 0.05);
+	border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.menu-dropdown li.level1:last-child{
+	-webkit-box-shadow: 1px 0 0 rgba(255,255,255,.05);
+	   -moz-box-shadow: 1px 0 0 rgba(255,255,255,.05);
+	        box-shadow: 1px 0 0 rgba(255,255,255,.05);
+}
+
+.menu-dropdown a.level1,
+.menu-dropdown span.level1 {
+	color: #FFF;
+	cursor: pointer;
+}
+
+.menu-dropdown a.level1 > span,
+.menu-dropdown span.level1 > span {
+	line-height: 50px;
+	height: 50px;
+	padding: 0 20px;
+}
+
+.menu-dropdown span.level1,
+.menu-dropdown li.level1 > a{
+	height: 50px;
+}
+
+.menu-dropdown li i {
+	font-size: 14px;
+	float: left
+}
+
+.menu-dropdown a.level1.has-icon i{
+	padding: 0 10px 0 10px;
+	line-height: 50px;
+}
+
+.menu-dropdown a.level2.has-icon i,
+.menu-dropdown a.level3.has-icon i,
+.menu-dropdown a.level4.has-icon i,
+.menu-dropdown a.level5.has-icon i{
+	padding: 0 10px 0 0;
+}
+
+.menu-dropdown a.level2.has-icon i,
+.menu-dropdown a.level3.has-icon i,
+.menu-dropdown a.level4.has-icon i,
+.menu-dropdown a.level5.has-icon i{
+	line-height: 2.4;
+}
+
+a.right-icon i{
+	float: right;
+}
+
+.menu-dropdown a.level1.has-icon > span,
+.menu-dropdown span.level1.has-icon > span {
+	padding: 0 20px 0 0;
+}
+
+/* Set Active */
+.menu-dropdown li.active > a { 
+	height: 50px;
+ }
+
+.menu-dropdown span.level2 > span{
+    padding: 10px 10px 5px;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+    margin: 6px;
+    -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+       -moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+    -webkit-border-radius: 2px;
+       -moz-border-radius: 2px;
+            border-radius: 2px;
+}
+
+.menu-dropdown a.level2 > span, .menu-dropdown span.level2 > span {
+	line-height: 20px;
+}
+
+.menu-dropdown span.level2 > span .subtitle {text-transform: lowercase !important;}
+.menu-dropdown span.icon{background-position: 50% 100%;}
+
+/* Drop-Down */
+.menu-dropdown .dropdown {
+	top: 49px;
+	left: -1px;
+}
+
+.menu-dropdown .dropdown-bg > div {
+	padding: 0;
+}
+
+.menu-dropdown .dropdown-bg{
+	padding: 0 0 10px 0;
+	margin: 0;
+}
+
+.menu-dropdown .dropdown-bg div.column {padding: 0}
+.dropdown-bg div ul.level2{margin: 0; padding: 5px 0;}
+
+
+/* Level 2 */
+.menu-dropdown a.level2,
+.menu-dropdown a.level3{
+	border: 1px solid transparent;
+}
+
+.menu-dropdown li.level2 > a{
+	padding-left: 10px; 
+	height: 34px;
+	box-shadow: none !important;
+}
+
+.menu-dropdown li.level2.hassubtitle > a {
+	height: 50px;
+}
+
+.menu-dropdown li.level2 { 
+	margin: 0;
+	 border-color: rgba(255, 255, 255, 0.05) transparent rgba(0, 0, 0, 0.05);
+     border-style: solid;
+     border-width: 1px 5px 1px 5px;
+}
+
+.menu-dropdown a.level3 {
+	border-radius: 2px;
+}
+
+.menu-dropdown a.current.level2,
+.menu-dropdown li.level2 a:hover {
+-webkit-box-shadow: rgba(0,0,0,0.2) 0 0 6px inset, 0px -1px 0 #fff inset;
+   -moz-box-shadow: rgba(0,0,0,0.2) 0 0 6px inset, 0px -1px 0 #fff inset;
+        box-shadow: rgba(0,0,0,0.2) 0 0 6px inset, 0px -1px 0 #fff inset;
+}
+
+.menu-dropdown li.level2 a:hover{
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.4) inset;
+	   -moz-box-shadow: 0 1px 2px rgba(0,0,0,.4) inset;
+	        box-shadow: 0 1px 2px rgba(0,0,0,.4) inset;
+}
+
+.menu-dropdown li.level2:last-child{background: none;}
+.menu-dropdown li.level2:first-child { border-top: none; }
+
+.menu-dropdown a.level2,
+.menu-dropdown span.level2 { color: #FFF; text-shadow:none;}
+
+.menu-dropdown span.subtitle{
+	font-size: 11px; 
+	margin-top:1px;
+	margin-bottom:2px;
+ 	line-height: 13px;
+ }
+
+.menu-dropdown li.level3,
+.menu-dropdown li.level4,
+.menu-dropdown li.level5{
+    font-size: 12px;
+    padding-left: 8px;
+    line-height: 25px;
+}
+
+.menu-dropdown li.level3 a {
+	margin-right: 8px;
+	padding-left: 10px;
+	min-height: 25px;
+}
+
+#bottom-c .menu-sidebar a.level1 > span, 
+#bottom-c .menu-sidebar span.level1 > span{
+	padding: 7px 13px 6px 0;
+}
+
+.menu-dropdown li.level2:hover a {box-shadow: none !important;}
+.menu-dropdown a.level2:hover,
+.menu-dropdown a.level3:hover{
+	color: #FFF;
+	text-shadow: none;
+}
+
+.menu-sidebar .level2 a > span {
+	font-size: 13px;
+	line-height: 22px;
+}
+
+/* Set Current */
+.menu-dropdown a.current.level2,
+.menu-dropdown a.level2:hover{ 
+	-webkit-box-shadow: 0 15px 50px rgba(255, 255, 255, 0.15) inset;
+	   -moz-box-shadow: 0 15px 50px rgba(255, 255, 255, 0.15) inset;
+			box-shadow: 0 15px 50px rgba(255, 255, 255, 0.15) inset;
+	font-weight: normal; 
+	-webkit-border-radius: 2px;
+	   -moz-border-radius: 2px;
+	        border-radius: 2px;
+	text-shadow: none;
+} 
+
+/* Set Hover */
+.menu-dropdown a.level3,
+.menu-dropdown a.level3:hover{
+	color: #FFF;
+	text-shadow: none;
+}
+
+/* Set Current */
+.menu-dropdown a.current.level3 { font-weight: normal;} 
+
+/* Icons */
+.menu-dropdown .level1 .level1 span.icon {
+	width: 30px;
+	height: 30px;
+	margin-left: -5px;
+}
+.menu-dropdown .level1 .level1 span.icon + span,
+.menu-dropdown .level1 .level1 span.icon + span + span { margin-left: 25px; }
+
+.menu-dropdown li.level2 .level2 span.icon { margin-right: 4px; }
+.menu-dropdown li.level2.hassubtitle .level2 span.icon {
+	margin-top: -12px;
+}
+
+.menu-dropdown li.level2 .level2 span.icon + span,
+.menu-dropdown li.level2 .level2 span.icon + span + span { margin-left: 39px; }
+
+/* Subtitles */
+.menu-dropdown .level1 .level1 span.title {padding-top: 8px;}
+.menu-dropdown .level1 .level1 span.subtitle {line-height: 15px; font-size: 12px;}
+
+
+/* Sidebar/Accordion Menu
+----------------------------------------------------------------------------------------------------*/
+
+/* Link */
+.menu-sidebar a,
+.menu-sidebar li > span { color: #606060; font-size: 12px;}
+
+/* Hover */
+.menu-sidebar a:hover,
+.menu-sidebar li > span:hover { color: #d50; }
+
+/* Level 1 */
+.menu-sidebar li.level1 { 
+	border-bottom: 1px solid rgba(0, 0, 0, 0.07); 
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
+	   -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
+	        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.footer-body .menu-sidebar li.level1 { 
+	border-top: 0 none; 
+	border-bottom: 1px solid rgba(0,0,0,.2); 
+	-webkit-box-shadow: 0 1px 0 rgba(255,255,255, 0.05);
+	   -moz-box-shadow: 0 1px 0 rgba(255,255,255, 0.05);
+	        box-shadow: 0 1px 0 rgba(255,255,255, 0.05);
+}
+
+
+.menu-sidebar li.parent.active .level1 > span { background-position: 100% -100px; }
+.colored .menu-sidebar li.parent.active .level1 > span { background-position: 100% -1px; }
+
+/* Level 2-4 */
+.menu-sidebar ul.level2 ul { padding-left: 10px; }
+
+/* Icons */
+.menu-sidebar span.icon { margin-right: 4px; }
+
+
+.menu-sidebar a.level1 > span:before, 
+.menu-sidebar span.level1 > span:before{
+	font-family: "fontAwesome";
+	content: "\f0da";
+	float: right;
+	font-size: 18px;
+	color: rgba(0, 0, 0, 0.45);
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+div.open-menu {display: block !important; height: auto !important;}
+
+.uk-color .uk-nav-dropdown > li > a:hover {
+	background-color: #FFF;
+}
+
+.uk-color .uk-nav-dropdown > li > a:hover, 
+.uk-color .uk-nav-dropdown > li > a:focus{
+	color: #505050 !important;
+}
+
+/*colored sidebar menu*/
+.colored .menu-sidebar li.level1{
+	border-bottom: 0 none;
+	text-shadow: none;
+	overflow: hidden;
+	position: relative;
+	-webkit-box-shadow: none;
+	   -moz-box-shadow: none;
+	        box-shadow: none;
+}
+
+.colored .menu-sidebar a.level1,
+.colored .menu-sidebar span.level1{
+	-webkit-box-shadow: 0 15px 50px rgba(255, 255, 255, 0.1) inset;
+	   -moz-box-shadow: 0 15px 50px rgba(255, 255, 255, 0.1) inset;
+			box-shadow: 0 15px 50px rgba(255, 255, 255, 0.1) inset;
+}
+
+.colored .menu-sidebar a.level1,
+.colored .menu-sidebar span.level1{
+	padding: 10px 8px 8px 15px;
+	cursor: pointer;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+.colored .menu-sidebar a.level1 > span,
+.colored .menu-sidebar span.level1 > span{
+	-webkit-transition: none 0s linear;
+	   -moz-transition: none 0s linear;
+	        transition: none 0s linear;
+}
+
+.colored .menu-sidebar a.level1:hover > span,
+.colored .menu-sidebar span.level1:hover > span{
+	background-position: 100% 0px;    
+}
+
+.colored .menu-sidebar li.level2{
+	margin: 0;
+}
+
+.colored .menu-sidebar ul.level2{
+	padding-bottom: 0;
+}
+
+.colored .menu-sidebar a.level2,
+.colored .menu-sidebar span.level2{
+	padding: 7px 20px;
+	border-top: 1px solid rgba(255,255,255,0.05);
+	-webkit-box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15) inset;
+	   -moz-box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15) inset;
+	        box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15) inset;
+}
+
+div.open-menu {
+	display: block !important; 
+	height: auto !important;
+}
+
+.dropdown-bg form.short a {
+	height: 28px;
+}
+
+/* Line Menu
+----------------------------------------------------------------------------------------------------*/
+
+.menu-line li {
+	margin-left: 7px;
+	padding-left: 8px;
+}
+
+.menu-line li:first-child {
+	margin-left: 0;
+	padding-left: 0;
+	background: none;
+}
+
+#bottom-menu .menu-line li {
+	font-size: 16px;
+	padding: 12px 20px;
+	margin-left: 0;
+	border-right: 1px solid rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 1px 0 0 rgba(255, 255, 255, 0.05), 0 0 1px rgba(255, 255, 255, 0.15) inset;
+	   -moz-box-shadow: 1px 0 0 rgba(255, 255, 255, 0.05), 0 0 1px rgba(255, 255, 255, 0.15) inset;
+	        box-shadow: 1px 0 0 rgba(255, 255, 255, 0.05), 0 0 1px rgba(255, 255, 255, 0.15) inset;
+}
+
+#bottom-menu .menu-line li:first-child{
+	padding-left: 20px;
+}
+
+#bottom-menu {
+    color: #FFFFFF;
+	background-color: rgba(0, 0, 0, 0.5);
+	border-bottom: 1px solid rgba(0,0,0,0.4);
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3), 1px 0 0 rgba(255, 255, 255, 0.1), 0 20px 40px rgba(255, 255, 255, 0.075) inset;
+	   -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3), 1px 0 0 rgba(255, 255, 255, 0.1), 0 20px 40px rgba(255, 255, 255, 0.075) inset;
+	        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3), 1px 0 0 rgba(255, 255, 255, 0.1), 0 20px 40px rgba(255, 255, 255, 0.075) inset;
+}
+
+/* off-canvas menu
+----------------------------------------------------------------------------------------------------*/
+.uk-navbar-toggle{
+	text-shadow: none;
+	display: none;
+	height: 36px;
+	font-size: 16px;
+	margin: 33px 0 0;
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+			border-radius: 3px;
+	color: #FFF;
+	position: absolute;
+	right: 30px;
+	top: 10px;
+	background: rgba(0, 0, 0, 0.02);
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08), 0 1px 1px rgba(0, 0, 0, 0.1) inset;
+	   -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08), 0 1px 1px rgba(0, 0, 0, 0.1) inset;
+			box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08), 0 1px 1px rgba(0, 0, 0, 0.1) inset;
+}
+
+.canvas-menu.module {
+	margin: 0;
+	padding: 0
+}
+
+#offcanvas .canvas-menu li{
+	display: block;
+	padding-left: 0
+}
+
+#offcanvas .canvas-menu a,
+#offcanvas .canvas-menu span {
+	display: block;
+	color: #ccc;
+}
+
+#offcanvas .small{
+	font-size: 100%
+}
+
+.canvas-menu .subtitle{
+	font-size: 12px;
+	padding: 5px 2px
+}
+
+#offcanvas [class^="icon-"], 
+#offcanvas [class*=" icon-"]{
+	width: auto;
+	height: auto
+}
+
+#offcanvas .canvas-menu li.level1 {
+	border-bottom: 0 none;
+	text-shadow: none;
+	overflow: hidden;
+	position: relative;
+	-webkit-box-shadow: none;
+	   -moz-box-shadow: none;
+	        box-shadow: none;
+}
+
+#offcanvas .canvas-menu a.level1,
+#offcanvas .canvas-menu span.level1{
+	color: #FFF;
+	padding: 10px 8px 8px 15px;
+	background: rgba(255, 255, 255, 0.05);
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05) inset;
+}
+
+#offcanvas .canvas-menu a.level2,
+#offcanvas .canvas-menu span.level2{
+	padding: 5px 20px;
+}
+
+#offcanvas .canvas-menu a.level3,
+#offcanvas .canvas-menu span.level3{
+	padding: 5px 0 5px 30px;
+}
+
+#offcanvas .canvas-menu a.level4,
+#offcanvas .canvas-menu span.level4{
+	padding: 5px 0 5px 40px;
+}
+
+#offcanvas .canvas-menu a.level5,
+#offcanvas .canvas-menu span.level5{
+	padding: 5px 0 5px 40px;
+}
+
+#offcanvas .canvas-menu i {
+	font-size: 14px;
+	float: left;
+	padding: 0 10px 0 0;
+	line-height: 1.8;
+}

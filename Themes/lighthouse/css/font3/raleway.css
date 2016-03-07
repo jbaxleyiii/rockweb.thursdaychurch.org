@@ -1,0 +1,29 @@
+/* Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+.menu-dropdown a,
+.menu-dropdown span,
+.icemegamenu > ul > li a.iceMenuTitle,
+.icemegamenu > ul > li span.icemega_desc,
+.icemega_cover_module p{ 
+ 	font-family: 'Raleway', sans-serif;
+	font-weight: 300; 
+}
+
+#offcanvas .canvas-menu a, 
+#offcanvas .canvas-menu span,
+.menu-dropdown li a.active,
+.menu-dropdown span.active{
+	font-family: 'Raleway', sans-serif;
+	font-weight: 300;
+}
+
+.menu-dropdown a.level1 > span, 
+.menu-dropdown span.level1 > span{
+ 	font-size: 15px;
+}
+
+.icemegamenu > ul > li span.icemega_desc,
+.menu-dropdown span.subtitle {
+	font-size: 13px; 
+	padding-top: 4px;
+}

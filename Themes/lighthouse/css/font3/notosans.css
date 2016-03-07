@@ -1,0 +1,18 @@
+/* Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+.menu-dropdown a,
+.menu-dropdown span,
+.icemegamenu > ul > li a.iceMenuTitle,
+.icemegamenu > ul > li span.icemega_desc,
+.icemega_cover_module p,
+#offcanvas .canvas-menu a, 
+#offcanvas .canvas-menu span,
+.menu-dropdown li a.active,
+.menu-dropdown span.active{ 
+ 	font-family: 'Noto Sans', sans-serif;
+}
+
+.menu-dropdown a.level1 > span, 
+.menu-dropdown span.level1 > span{
+ 	font-size: 14px;
+}

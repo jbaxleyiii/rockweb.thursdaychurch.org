@@ -1,0 +1,236 @@
+/* Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+/* General
+----------------------------------------------------------------------------------------------------*/
+
+#system .title a { color: inherit; }
+#system small { color: inherit; }
+
+/* Item
+----------------------------------------------------------------------------------------------------*/
+
+#system .item > header .meta { 
+	padding-bottom: 0px; 
+	padding-left: 0;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 12px;
+	line-height: 2;
+
+}
+.yoo-zoo .item > header .meta { padding-left: 0 !important;}
+#system .item > header.results .meta { margin-left: 0;}
+#system .item > header .subtitle{ color: #777; }
+
+/* Items
+----------------------------------------------------------------------------------------------------*/
+
+#system .items .item {
+	margin-bottom: 12px;
+	padding-bottom: 18px;
+	background: url(../images/body/mod-dot.png) repeat-x scroll 0 100% transparent;
+}
+
+#system .items .item:first-child {
+	margin-top: 0;
+	padding-top: 0;
+	border: none;
+}
+
+
+/* Pagination
+----------------------------------------------------------------------------------------------------*/
+
+#system .pagination a.last,
+#system .pagination a.first{
+	padding:0 10px;
+}
+
+#system .pagination a, 
+#system .pagination strong{
+	line-height: 27px; 
+	height: 28px;
+	margin-left: 0;
+}
+
+#system .pagination a.previous, 
+#system .pagination a.next{
+	line-height: 26px !important;
+	font-family: monospace;
+}
+
+#content .pagination{
+	margin-bottom: 20px;
+	text-align: left;
+}
+
+#content .pagination a.previous, 
+#content .pagination a.next, 
+#content .pagination a, 
+#content .pagination strong {
+	margin-right: 6px;
+	text-align: center;
+}
+
+#content .pagination > *:first-child {
+	margin-right: 5px;
+}
+
+/* Search Box
+----------------------------------------------------------------------------------------------------*/
+
+.searchbox {
+	width: 160px;
+	height: 19px;
+	padding: 0 10px;
+	margin: 5px 0 0px;
+	-webkit-border-radius: 5px;
+	   -moz-border-radius: 5px;
+	    -ms-border-radius: 5px;
+	     -o-border-radius: 5px;
+	        border-radius: 5px;
+}
+
+.searchbox input {
+	height: 15px;
+	font-size: 11px;
+}
+
+.searchbox input{color: #F4F4F4;}
+.searchbox input[type="text"]:focus {
+	background: none !important;
+}
+
+.searchbox input:-moz-placeholder { color: #999; }
+.searchbox input::-webkit-input-placeholder { color: #999; }
+.searchbox input.placeholder { color: #999; }
+
+.searchbox.filled button {
+	width: 25px;
+	background: none;
+}
+
+/* Drop-Down Results */
+.searchbox .results {
+	top: 41px;
+	right: -1px;
+	width: 300px;
+	border: 1px solid rgba(0,0,0,0.1);
+	-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+	   -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.searchbox .results li.result,
+.searchbox .results li.results-header, 
+.searchbox .results li.more-results { 
+	border-bottom: 1px solid rgba(0,0,0,0.03); 
+	border-top: 1px solid rgba(255,255,255,0.075);
+}
+
+.searchbox .results li.results-header + li.result { border-top: none; }
+.searchbox .results li.result.selected { background: rgba(0,0,0,0.03); }
+li.result, li.more-results, li.results-header {margin-bottom: 0}
+
+#offcanvas .searchbox {
+	margin: 0 !important;
+}
+
+#offcanvas .searchbox .results {
+	width: 250px;
+}
+
+
+/* Breadcrumbs
+----------------------------------------------------------------------------------------------------*/
+
+.breadcrumbs a,
+.breadcrumbs > span {
+	padding-right: 2px;
+	height: 35px;
+}
+
+.breadcrumbs i{
+	padding-right: 10px;
+	color: inherit;
+}
+
+#breadcrumbs{
+	display:block;
+	overflow:visible;
+	-webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+     -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+	background: url(../images/body/breadcrumbs-bg.png) 0 0 repeat-x;
+}
+
+#breadcrumbs .wrapper{padding-left: 10px;}
+.breadcrumbs {line-height: 35px;}
+.breadcrumbs strong{font-weight: normal;}
+a.home{margin: 0 5px 5px 0; float: left;}
+
+/* Author Box
+----------------------------------------------------------------------------------------------------*/
+
+#system .author-box {
+	padding: 15px;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	background: #fafafa;
+}
+
+#system .author-box .avatar {
+	padding: 3px;
+	border: 1px solid #ddd;
+	background: #fff;
+}
+
+#system .author-box .name { color: #444; }
+
+
+/* Comments
+----------------------------------------------------------------------------------------------------*/
+
+/* Head */
+#system #comments .comment-head {
+	padding: 10px;
+	border: 1px solid rgba(0,0,0,0.1);
+	background: none repeat scroll 0 0 rgba(255,255,255,0.2);
+	-webkit-box-shadow: 0 1px 0 rgba(255,255,255,.2);
+	   -moz-box-shadow: 0 1px 0 rgba(255,255,255,.2);
+	        box-shadow: 0 1px 0 rgba(255,255,255,.2);
+}
+
+#system #comments .comment-byadmin .comment-head {
+	border: 1px solid #dce6be;
+	background: #faffe6;
+}
+
+#system #comments h3.comments-meta, .yoo-zoo .item .element > h3, .yoo-zoo .item .pos-related > h3{
+	font-size: 24px; background: url(../images/body/mod-dot.png) repeat-x scroll 0 100% transparent; padding-bottom: 15px;
+}
+
+#system #comments .comment-head .author { text-shadow: 1px 1px 0 rgba(255, 255, 255, 1); font-weight: normal;}
+
+/* Body */
+#system #comments ul.level1 ul { background: url(../images/comments_arrow.png) 0 0 no-repeat; }
+
+/* Respond */
+#system #respond h3 { color: #444; font-size: 24px; background: url(../images/body/mod-dot.png) repeat-x scroll 0 100% transparent; padding-bottom: 15px;}
+
+
+/* Latest Comments
+----------------------------------------------------------------------------------------------------*/
+
+.comments-list > article { border-top: 1px solid #ddd; }
+.comments-list > article:first-child { border: none; }
+
+.comments-list .meta { color: #999; }
+.zoo-comments-list .author {font-size: 16px;}
+/*error*/
+
+#system-message dd.error{
+	background-color: #DCA49C;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.4); 
+	border: 1px solid #CA7266;
+}

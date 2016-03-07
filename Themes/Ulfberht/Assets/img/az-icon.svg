@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="393px" height="461px" viewBox="0 0 393 461" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.1 (9971) - http://www.bohemiancoding.com/sketch -->
+    <title>Untitled 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path id="path-1" d="M0.06,0.262 L392.221,0.262 L392.221,460.94 L0.06,460.94"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="AZ_Icon" sketch:type="MSLayerGroup">
+            <mask id="mask-2" sketch:name="Clip 2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Clip-2"></g>
+            <path d="M392.221,0.262 L44.539,0.415 L44.619,70.633 L0,63.241 L24.732,219.309 L38.529,229.926 L9.05,313.67 L28.288,329.364 L4.791,373.714 L246,461 L392.185,460.715 L392.221,0.262" id="Fill-1" fill="#6B6D6A" sketch:type="MSShapeGroup" mask="url(#mask-2)"></path>
+        </g>
+    </g>
+</svg>

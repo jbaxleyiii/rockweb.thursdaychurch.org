@@ -1,0 +1,11 @@
+	{% if LinkedPages.MyAccountPage != '' and CurrentPerson != null %}
+		<a href="{{ LinkedPages.MyAccountPage }}" class="login modal-form" data-target="#login-form" data-toggle="modal" >{{CurrentPerson.NickName}}</a>
+<a href="#" onclick="{{ '' | Postback:'UserLoginLogout' }}" class="login modal-form" data-target="#login-form" data-toggle="modal" >Logout</a>
+	{% endif %}
+
+	{% if CurrentUser == null %}
+			<a href="#" onclick="{{ '' | Postback:'UserLoginLogout' }}" class="login modal-form" data-target="#login-form" data-toggle="modal" >Login</a>
+	{% else %}
+			<a href="#" onclick="{{ '' | Postback:'UserLoginLogout' }}" class="login modal-form" data-target="#login-form" data-toggle="modal" >Logout</a>
+	{% endif %}
+		<!--a href="http://rockweb.centralaz.com/#">Give</a-->

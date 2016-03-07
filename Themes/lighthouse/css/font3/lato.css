@@ -1,0 +1,30 @@
+/* Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+.menu-dropdown a,
+.menu-dropdown span,
+.icemegamenu > ul > li a.iceMenuTitle,
+.icemegamenu > ul > li span.icemega_desc,
+.icemega_cover_module p,
+#offcanvas .canvas-menu a, 
+#offcanvas .canvas-menu span,
+.menu-dropdown li a.active,
+.menu-dropdown span.active {
+ 	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	font-size: 15px;
+}
+
+#offcanvas .canvas-menu a.level1, 
+#offcanvas .canvas-menu span.level1,
+.menu-dropdown li a.level1.active,
+.menu-dropdown span.level1.active,
+a.icemega_active > span.icemega_title {
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+}
+
+.icemegamenu > ul > li span.icemega_desc,
+.menu-dropdown span.subtitle {
+	font-size: 13px; 
+	padding-top: 4px;
+}

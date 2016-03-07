@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="37px" height="43px" viewBox="0 0 37 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.1 (9971) - http://www.bohemiancoding.com/sketch -->
+    <title>campus-gi</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path id="path-1" d="M0,0.417 L232.689,0.417 L232.689,42.939 L0,42.939 L0,0.417 Z"></path>
+        <path id="path-3" d="M0,0.417 L232.689,0.417 L232.689,42.939 L0,42.939"></path>
+        <path id="path-5" d="M0,0.417 L232.689,0.417 L232.689,42.939 L0,42.939 L0,0.417 Z"></path>
+        <path id="path-7" d="M0,0.417 L232.689,0.417 L232.689,42.939 L0,42.939 L0,0.417 Z"></path>
+        <path id="path-9" d="M0,0.417 L232.689,0.417 L232.689,42.939 L0,42.939"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Campus_Icons_Outline" sketch:type="MSLayerGroup" transform="translate(-49.000000, 0.000000)">
+            <g id="Group-3">
+                <mask id="mask-2" sketch:name="Clip 2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-2"></g>
+            </g>
+            <g id="Group-8">
+                <mask id="mask-4" sketch:name="Clip 6" fill="white">
+                    <use xlink:href="#path-3"></use>
+                </mask>
+                <g id="Clip-6"></g>
+                <path d="M67.388,0.417 L48.952,11.058 L48.952,32.354 L67.388,43 L85.829,32.354 L85.829,11.058 L67.388,0.417 L67.388,0.417 Z M67.388,2.727 L83.829,12.213 L83.829,31.199 L67.388,40.69 L50.952,31.199 L50.952,12.213 L67.388,2.727 L67.388,2.727 Z" id="Fill-7" fill="#FFFFFF" sketch:type="MSShapeGroup" mask="url(#mask-4)"></path>
+            </g>
+            <path d="M65.803,18.137 C65.746,17.871 65.654,17.627 65.527,17.406 C65.401,17.184 65.239,17 65.043,16.854 C64.846,16.708 64.608,16.636 64.33,16.636 C63.671,16.636 63.196,17.004 62.904,17.738 C62.613,18.473 62.467,19.69 62.467,21.388 C62.467,22.199 62.493,22.934 62.543,23.593 C62.593,24.252 62.686,24.813 62.819,25.275 C62.952,25.738 63.142,26.092 63.389,26.34 C63.636,26.587 63.956,26.711 64.349,26.711 C64.514,26.711 64.694,26.666 64.891,26.578 C65.087,26.489 65.271,26.355 65.442,26.178 C65.614,26.001 65.756,25.776 65.87,25.503 C65.984,25.231 66.041,24.911 66.041,24.544 L66.041,23.156 L64.235,23.156 L64.235,21.141 L68.664,21.141 L68.664,28.459 L66.649,28.459 L66.649,27.204 L66.611,27.204 C66.282,27.737 65.885,28.114 65.423,28.335 C64.961,28.558 64.406,28.668 63.76,28.668 C62.923,28.668 62.242,28.523 61.716,28.231 C61.19,27.94 60.779,27.489 60.481,26.882 C60.183,26.274 59.983,25.523 59.882,24.628 C59.781,23.736 59.73,22.699 59.73,21.521 C59.73,20.38 59.803,19.38 59.949,18.517 C60.094,17.656 60.344,16.937 60.699,16.36 C61.054,15.784 61.523,15.349 62.106,15.057 C62.689,14.767 63.417,14.621 64.292,14.621 C65.788,14.621 66.864,14.992 67.524,15.732 C68.183,16.474 68.512,17.536 68.512,18.917 L65.889,18.917 C65.889,18.664 65.86,18.403 65.803,18.137" id="Fill-9" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <g id="Group-13">
+                <mask id="mask-6" sketch:name="Clip 11" fill="white">
+                    <use xlink:href="#path-5"></use>
+                </mask>
+                <g id="Clip-11"></g>
+                <path d="M70.451,18.233 L73.075,18.233 L73.075,28.46 L70.451,28.46 L70.451,18.233 Z M70.451,14.735 L73.075,14.735 L73.075,16.978 L70.451,16.978 L70.451,14.735 Z" id="Fill-10" fill="#FFFFFF" sketch:type="MSShapeGroup" mask="url(#mask-6)"></path>
+            </g>
+            <g id="Group-18">
+                <mask id="mask-8" sketch:name="Clip 16" fill="white">
+                    <use xlink:href="#path-7"></use>
+                </mask>
+                <g id="Clip-16"></g>
+            </g>
+            <g id="Group-23">
+                <mask id="mask-10" sketch:name="Clip 21" fill="white">
+                    <use xlink:href="#path-9"></use>
+                </mask>
+                <g id="Clip-21"></g>
+            </g>
+        </g>
+    </g>
+</svg>

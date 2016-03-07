@@ -1,0 +1,38 @@
+/* Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+h1,h2,h3,h4,h5,h6,
+.show-title,
+.digit,
+.event-time .date,
+p.dropcap:first-letter,
+blockquote,
+blockquote p,
+#Kunena span.ktopic-views-number,
+#Kunena td.kcol-ktopicreplies strong,
+#Kunena td.kcol-kcattopics .kcat-topics-number,
+#Kunena span.kcat-topics-number,
+#Kunena span.kcat-replies-number,
+.price-col .th span ,
+.price-col .price-tag,
+.wk-twitter-single .content,
+#cntdwn b,
+.mod_events_monthyear,
+a.mod_events_link:link,
+#cal_title ,
+#cntdwn b,
+.sprocket-tabs-nav li .sprocket-tabs-inner
+.uk-event-date,
+p.dropcap:first-letter,
+blockquote,
+blockquote p,
+span.iceModuleTile {
+	font-family: 'Ropa Sans', sans-serif;
+}
+
+p.dropcap:first-letter{
+	line-height: 0.8;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	letter-spacing: -0.5px;
+}

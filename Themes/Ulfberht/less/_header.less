@@ -1,0 +1,133 @@
+.navbar {
+	background: @black;
+	border: none;
+	height: 60px;
+	min-height: 60px;
+}
+a.navbar-brand {
+	background: url(/assets/img/logo.svg) no-repeat;
+	background-size: 50px;
+	display: inline-block;
+	left: 30px;
+	position: relative;
+	top: 10px;
+	width: 100px;
+	z-index: 100;
+	&:hover,
+	&:active {
+		background: url(/assets/img/logo-green.svg) no-repeat;
+		background-size: 50px;
+	}
+}
+.navbar-default .navbar-collapse, 
+.navbar-default .navbar-form {
+	border: none;
+}
+.nav-bar-nav,
+.navbar-nav li a {
+	color: @white !important;
+	font-family: @font-sans;
+	font-size: 12px;
+	font-weight: 500;
+	letter-spacing: 0.01em;
+	margin: 0;
+	padding: 10px;
+	text-transform: uppercase;
+	vertical-align: top;
+	&:hover,
+	&:focus {
+		color: @green !important;
+	}
+	@media (min-width: 1115px) {
+		padding: 20px 10px;
+	}
+}
+#search {
+	.box-sizing(border-box);
+	background: @black;
+	border: 1px solid @gray-light;
+	height: 34px;
+	padding-top: 5px;
+	position: absolute;
+	right: 64px;
+	text-align: center;
+	top: 12px;
+	width: 44px;
+	span {
+		color: @white;
+	}
+	@media (min-width: 1115px) {
+		background: @green;
+		border-color: @green; 
+		display: inline-block;
+		font-size: 18px;
+		height: 60px;
+		padding-top: 15px;
+		right: 0;
+		top: 0;
+		width: 60px;
+		z-index: 20;
+		span {
+			color: @grey-dark;
+		}
+	}
+}
+.navbar-main {
+	float: left;
+	padding-left: 10px;
+	@media (min-width: 1115px) {
+		margin-right: 10px;
+		padding-left: 0;
+	}
+}
+.navbar-secondary {
+	.box-sizing(border-box);
+	background: @black;
+	float: right;
+	height: 100%;
+	padding-left: 10px;
+	width: 50%;
+	li a {
+		color: @white !important;
+	}
+	@media (min-width: 1115px) {
+		background: @grey-dark;
+		border-radius: 0;
+		float: left;
+		padding-left: 10px;
+		padding-right: 15px;	
+		width: auto;
+		li a:hover,
+		li a:focus {
+			color: @green !important;
+			text-decoration: none;
+		}
+	}
+}
+div.ul-container {
+	@media (min-width: 1115px) {
+		float: right;
+		margin-right: 60px;
+	}
+}
+.navbar-fixed-top .navbar-collapse, 
+.navbar-fixed-bottom .navbar-collapse {
+	background: @black;
+	max-height: 100%;
+	position: relative;
+	z-index: 10;
+}
+.navbar-default .navbar-toggle {
+	border-color: @gray-light;
+	border-radius: 0;
+	margin-right: 20px;
+	margin-top: 12px;
+	&:hover,
+	&:focus {
+		background: @green;
+		border-color: @green;
+	}
+	span.icon-bar {
+		background: @white;
+	}
+}

@@ -1,0 +1,34 @@
+/* Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+@import url(../../../css/layout.css);
+
+
+/*logo*/
+.logo-img{background: url(../images/logo.png) no-repeat scroll 0 0 transparent;}
+
+/*section*/
+.sheet.main-content{
+	border-top: 1px solid rgba(255,255,255, 0.35);
+	background-color: rgba(255, 255, 170, 0.12);
+}
+
+/*modules*/
+#bottom-block {text-shadow: 0 1px 0 rgba(255,255,255,0.4)}
+.event-time, .block-number{background: url(../images/dt-event.png) no-repeat scroll 0 0 transparent;}
+
+.event-time .month, .block-number .bottom{color: #FFFFFF;}
+.event-time .date, .block-number .digit {color: #606060;}
+
+.mod_events_monthyear{
+	background: url(../images/je-month.png) no-repeat scroll 0 0 transparent;
+	width: 235px !important;
+	height: 40px !important;
+	text-shadow: none;
+	font-weight: normal !important;
+}
+
+.mod_events_td_todaynoevents,
+.mod_events_td_todaywithevents
+{background: url(../images/today.png) no-repeat scroll 80% 50% transparent;}
+
+.mod_events_td_daywithevents{background: url(../images/appointment.png) no-repeat scroll 2px 0 rgba(0, 0, 0, 0)}

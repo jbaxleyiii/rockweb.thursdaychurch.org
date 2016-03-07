@@ -1,0 +1,186 @@
+// Colored BG 
+.bg-color-black {
+	background: fadeout(@black,5%);
+}
+.bg-color-grey-dark {
+	background: fadeout(@grey-dark,5%);
+}
+.bg-color-grey {
+	background: fadeout(@grey,5%);
+}
+.bg-color-green {
+	background: fadeout(@green,5%);
+}
+.bg-color-teal {
+	background: fadeout(@teal,5%);
+}
+.bg-color-red {
+	background: fadeout(@red,5%);
+}
+.bg-color-orange {
+	background: fadeout(@orange,5%);
+}
+.bg-color-yellow {
+	background: fadeout(@yellow,5%);
+}
+
+// Background Pattern 
+
+.bg-pattern {
+	background: url(../img/bg-pattern.png) repeat;
+	background-size: 100px;
+}
+.bg-pattern-dark {
+	background: url(../img/bg-pattern-dark.png) repeat;
+	background-size: 100px;
+}
+.bg-pattern-green {
+	background: url(../img/bg-pattern-green.png) repeat;
+	background-size: 100px;
+}
+
+// Background Images 
+
+[class*=bg-image-] {
+	overflow: hidden;
+	position: relative;
+}
+[class*=bg-image-]:before {
+	background: rgba(0,0,0,0.4);
+	content: "";
+	display: block;
+	min-height: 2000px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+.bg-image-noise {
+	background: url(../img/bg-noise.jpg) no-repeat;
+	background-size: cover;
+	&:before {
+		background: rgba(0,0,0,0.7);
+	}
+}
+.bg-image-1 {
+	background: url(../img/image-1.jpg) no-repeat;
+	background-size: cover;
+}
+.bg-image-2 {
+	background: url(../img/image-2.jpg) no-repeat;
+	background-size: cover;
+}
+.bg-image-3 {
+	background: url(../img/image-3.jpg) no-repeat;
+	background-size: cover;
+}
+.bg-image-4 {
+	background: url(../img/image-4.jpg) no-repeat;
+	background-size: cover;
+}
+.bg-image-5 {
+	background: url(../img/image-5.jpg) no-repeat;
+	background-size: cover;
+}
+.bg-image-6 {
+	background: url(../img/image-6.jpg) no-repeat;
+	background-size: cover;
+}
+.bg-image-7 {
+	background: url(../img/image-7.jpg) no-repeat;
+	background-size: cover;
+}
+.bg-image-8 {
+	background: url(../img/image-8.jpg) no-repeat;
+	background-size: cover;
+}
+.bg-image-9 {
+	background: url(../img/image-9.jpg) no-repeat;
+	background-size: cover;
+}
+.bg-image-10 {
+	background: url(../img/image-10.jpg) no-repeat;
+	background-size: cover;
+}
+.bg-image-11 {
+	background: url(../img/image-11.jpg) no-repeat;
+	background-size: cover;
+}
+
+
+.bg-image-001 {
+	background: url(../img/image-001.jpg) no-repeat;
+	background-size: cover;
+}
+.bg-image-002 {
+	background: url(../img/image-002.jpg) no-repeat;
+	background-size: cover;
+}
+.bg-image-003 {
+	background: url(../img/image-003.jpg) no-repeat;
+	background-size: cover;
+}
+.bg-image-004 {
+	background: url(../img/image-004.jpg) no-repeat;
+	background-size: cover;
+}
+.bg-image-005 {
+	background: url(../img/image-005.jpg) no-repeat;
+	background-size: cover;
+}
+.bg-image-006 {
+	background: url(../img/image-006.jpg) no-repeat;
+	background-size: cover;
+}
+.bg-image-007 {
+	background: url(../img/image-007.jpg) no-repeat;
+	background-size: cover;
+}
+.bg-image-008 {
+	background: url(../img/image-008.jpg) no-repeat;
+	background-size: cover;
+}
+.bg-image-009 {
+	background: url(../img/image-009.jpg) no-repeat;
+	background-size: cover;
+}
+.bg-image-010 {
+	background: url(../img/image-010.jpg) no-repeat;
+	background-size: cover;
+}
+.bg-image-011 {
+	background: url(../img/image-011.jpg) no-repeat;
+	background-size: cover;
+}
+.bg-image-012 {
+	background: url(../img/image-012.jpg) no-repeat;
+	background-size: cover;
+}
+.bg-image-013 {
+	background: url(../img/image-013.jpg) no-repeat;
+	background-size: cover;
+}
+.bg-image-014 {
+	background: url(../img/image-014.jpg) no-repeat;
+	background-size: cover;
+}
+
+
+// Special BG Images 
+
+.bg-image-home-luke {
+	background: url(../img/home-luke.jpg) no-repeat;
+	background-size: cover;	
+	position: relative;
+	a.button {
+		bottom: 100px;
+		left: 0;
+		margin: 0 auto;
+		position: absolute;
+		right: 0;
+		width: 300px;
+	}
+	&:before {
+		background: transparent;
+	}
+}

@@ -1,0 +1,9 @@
+/* Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+.menu-dropdown a.level1,
+.menu-dropdown span.level1,
+.menu-line a.level1
+ {
+	font-family: "Istok Web";
+	font-size: 16px;
+}

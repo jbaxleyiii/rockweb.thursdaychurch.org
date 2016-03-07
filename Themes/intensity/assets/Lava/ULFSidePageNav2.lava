@@ -1,0 +1,40 @@
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+	  <div class="panel panel-default">
+		<div class="panel-heading" role="tab" id="headingOne">
+		  <h4 class="panel-title">
+			<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="ULFside-nav-header">
+			  {{Page.Title }}
+			</a>
+		  </h4>
+		</div>
+	  </div>
+	  
+	 {% for childPage in Page.Pages %}
+	  <div class="panel panel-default">
+		<div class="panel-heading" role="tab" id="heading{{forloop.index}}">
+		  
+		{% if childPage.DisplayChildPages != 'true' or childPage.Pages == empty %}
+			<h4 class="panel-title">
+			<a class="sideULF-non-parent" href="{{ childPage.Url }}">{{ childPage.Title }}</a>
+			</h4>
+		</div>
+		{% else %}
+			<h4 class="panel-title">
+			<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse{{forloop.index}}" aria-expanded="false" aria-controls="collapse{{forloop.index}}">
+			  {{ childPage.Title }}
+			</a>
+		  </h4>
+		  <div id="collapse{{forloop.index}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{forloop.index}}">
+			<div class="panel-body ULFside-nav">
+				<li class="ULFside-nav"><a href="{{ childPage.Url }}">{{ childPage.Title }} (link)</a>
+				</li>
+			{% for subchildPage in childPage.Pages %}
+				<li class="ULFside-nav"><a href="{{ subchildPage.Url }}">{{ subchildPage.Title }}</a>
+				</li> 
+			{% endfor %}
+		    </div>
+		  </div>
+	  </div>
+	    {% endif %}
+	{% endfor %}
+</div>

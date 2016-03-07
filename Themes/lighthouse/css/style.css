@@ -1,0 +1,184 @@
+/* Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+
+/* Base
+----------------------------------------------------------------------------------------------------*/
+
+img.pic-border {
+    -webkit-transition: all .2s ease-in-out;
+       -moz-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+}
+
+
+/* Layout
+----------------------------------------------------------------------------------------------------*/
+/*body background textures*/
+.bg_texture_0, .footer_texture_0{background-image: none;}
+.bg_texture_1, .bg_texture_2, .bg_texture_3, .bg_texture_4, .bg_texture_5, .bg_texture_6,
+.bg_texture_11, .bg_texture_12, .bg_texture_13, .bg_texture_15, .bg_texture_16, .bg_texture_17, 
+.bg_texture_18, .bg_texture_19, .bg_texture_20, .bg_texture_21, .bg_texture_22, .bg_texture_23,
+.footer_texture_1, .footer_texture_2, .footer_texture_3, .footer_texture_4, .footer_texture_5,
+.footer_texture_6, .footer_texture_7, .footer_texture_8, .footer_texture_9, .footer_texture_10,
+.footer_texture_11, .footer_texture_12, .footer_texture_13{
+    background-repeat: repeat;
+    background-color: transparent;
+    background-position: top left;
+} 
+
+.bg_texture_1{background-image: url(../images/texture/1.png);}
+.bg_texture_2{background-image: url(../images/texture/2.png);}
+.bg_texture_3{background-image: url(../images/texture/3.png);}
+.bg_texture_4{background-image: url(../images/texture/4.png);}
+.bg_texture_5{background-image: url(../images/texture/5.png);}
+.bg_texture_6{background-image: url(../images/texture/6.png);}
+.bg_texture_11, .footer_texture_1{background-image: url(../images/texture/11.png);}
+.bg_texture_12, .footer_texture_2{background-image: url(../images/texture/12.jpg);}
+.bg_texture_13, .footer_texture_3{background-image: url(../images/texture/13.jpg);}
+.footer_texture_4{background-image: url(../images/texture/14.jpg);}
+.bg_texture_15, .footer_texture_5{background-image: url(../images/texture/15.jpg);}
+.bg_texture_16, .footer_texture_6{background-image: url(../images/texture/16.png);}
+.bg_texture_17, .footer_texture_7{background-image: url(../images/texture/17.png);}
+.bg_texture_18, .footer_texture_8{background-image: url(../images/texture/18.png);}
+.bg_texture_19, .footer_texture_9{background-image: url(../images/texture/19.png);}
+.bg_texture_20, .footer_texture_10{background-image: url(../images/texture/20.jpg);}
+.bg_texture_21, .footer_texture_11{background-image: url(../images/texture/21.jpg);}
+.bg_texture_22, .footer_texture_12{background-image: url(../images/texture/22.jpg);}
+.bg_texture_23, .footer_texture_13{background-image: url(../images/texture/23.jpg);}
+.bg_texture_24{
+    background-image: url(../images/texture/custom-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-attachment: fixed;
+}
+
+
+.sheet-body.main_texture_1 #sidebar-a,
+.sheet-body.main_texture_1 #sidebar-b,
+.sheet-body.main_texture_2 #sidebar-a,
+.sheet-body.main_texture_2 #sidebar-b,
+.sheet-body.main_texture_3 #sidebar-a,
+.sheet-body.main_texture_3 #sidebar-b,
+.sheet-body.main_texture_4 #sidebar-a,
+.sheet-body.main_texture_4 #sidebar-b,
+.sheet-body.main_texture_5 #sidebar-a,
+.sheet-body.main_texture_5 #sidebar-b{
+    background-color: transparent;
+}
+
+.sheet-body.main_texture_1 {
+    background-image: url(../images/texture/7_top.jpg), url(../images/texture/7_r.jpg);
+    background-repeat: repeat-x, repeat;
+    background-position: top left, top left;
+} 
+
+.sheet-body.main_texture_2 {
+    background-image: url(../images/texture/8_top.jpg), url(../images/texture/8_r.jpg);
+    background-repeat: repeat-x, repeat;
+    background-position: top left, top left;
+}
+
+.sheet-body.main_texture_3 {
+    background-image: url(../images/texture/9_top.jpg), url(../images/texture/9_r.jpg);
+    background-repeat: repeat-x, repeat;
+    background-position: top left, top left;
+}
+
+.sheet-body.main_texture_4 {
+    background-image: url(../images/texture/10_top.jpg), url(../images/texture/10_r.jpg);
+    background-repeat: repeat-x, repeat;
+    background-position: top left, top left;
+}
+
+.sheet-body.main_texture_5 {
+    background-image: url(../images/texture/24.png);
+    background-repeat: repeat;
+    background-position: top left;
+}
+
+/*mid background textures*/
+.content_texture_t{background-image: none}
+
+/*overlays*/
+.comp_texture_0 .mod-color, 
+.comp_texture_0 .price-col .th .overlay, 
+.comp_texture_0 .showcase-gradient, 
+.comp_texture_0 .colored .menu-sidebar a.level1, 
+.comp_texture_0 .colored .menu-sidebar span.level1 {background-image: none;}
+
+.comp_texture_1 .mod-color, 
+.comp_texture_1 .price-col .th .overlay, 
+.comp_texture_1 .showcase-gradient, 
+.comp_texture_1 .colored .menu-sidebar a.level1, 
+.comp_texture_1 .colored .menu-sidebar span.level1 {background-image: url(../images/overlay/1.png); background-repeat: repeat;}
+
+.comp_texture_2 .mod-color, 
+.comp_texture_2 .price-col .overlay, 
+.comp_texture_2 .showcase-gradient, 
+.comp_texture_2 .colored .menu-sidebar a.level1, 
+.comp_texture_2 .colored .menu-sidebar span.level1 {background-image: url(../images/overlay/2.png); background-repeat: repeat;}
+
+.comp_texture_3 .mod-color, 
+.comp_texture_3 .price-col .overlay, 
+.comp_texture_3 .showcase-gradient, 
+.comp_texture_3 .colored .menu-sidebar a.level1, 
+.comp_texture_3 .colored .menu-sidebar span.level1 {background-image: url(../images/overlay/3.png); background-repeat: repeat;}
+
+.comp_texture_4 .mod-color, 
+.comp_texture_4 .price-col .overlay, 
+.comp_texture_4 .showcase-gradient, 
+.comp_texture_4 .colored .menu-sidebar a.level1, 
+.comp_texture_4 .colored .menu-sidebar span.level1 {background-image: url(../images/overlay/4.png); background-repeat: repeat;}
+
+.comp_texture_5 .mod-color, 
+.comp_texture_5 .price-col .overlay, 
+.comp_texture_5 .showcase-gradient, 
+.comp_texture_5 .colored .menu-sidebar a.level1, 
+.comp_texture_5 .colored .menu-sidebar span.level1 {background-image: url(../images/overlay/5.png); background-repeat: repeat;}
+
+.comp_texture_6 .mod-color, 
+.comp_texture_6 .price-col .overlay, 
+.comp_texture_6 .showcase-gradient, 
+.comp_texture_6 .colored .menu-sidebar a.level1, 
+.comp_texture_6 .colored .menu-sidebar span.level1 {background-image: url(../images/overlay/6.png); background-repeat: repeat;}
+    
+.comp_texture_7 .mod-color, 
+.comp_texture_7 .price-col .overlay, 
+.comp_texture_7 .showcase-gradient, 
+.comp_texture_7 .colored .menu-sidebar a.level1, 
+.comp_texture_7 .colored .menu-sidebar span.level1 {background-image: url(../images/overlay/7.png); background-repeat: repeat;}
+
+
+
+/* Modules
+----------------------------------------------------------------------------------------------------*/
+
+/*gradient 1*/
+.element_grad_1 #Kunena .kcontenttablespacer, .element_grad_1 #Kunena div.kmsg-header h2,
+.element_grad_1 #Kunena .kforum-pathway, .element_grad_1  #Kunena .kforum-pathway-bottom,
+.element_grad_1 #Kunena #ktab,
+.element_grad_1 #Kunena thead tr th, .element_grad_1 #Kunena tr.ksth th{   
+    background: rgba(255,255,255,0.35);
+}
+
+.element_grad_1 #Kunena tr.krow1 td,
+#jevents_body .ev_td_left{
+    background-color: rgba(239, 224, 191, 0.6);
+}
+
+/*gradient 2*/
+.element_grad_2 #Kunena .kcontenttablespacer, .element_grad_2 #Kunena div.kmsg-header h2,
+.element_grad_2 #Kunena .kforum-pathway, .element_grad_2  #Kunena .kforum-pathway-bottom,
+.element_grad_2 #Kunena #ktab, 
+.element_grad_2 #Kunena thead tr th, .element_grad_2 #Kunena tr.ksth th{   
+    background:rgba(255,255,255,0.55);
+    border: 0 none;
+    -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.075), 0 -1px 0 rgba(255, 255, 255, .5) inset;
+       -moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.075), 0 -1px 0 rgba(255, 255, 255, .5) inset;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.075), 0 -1px 0 rgba(255, 255, 255, .5) inset;
+}
+
+.element_grad_2 #Kunena tr.krow1 td,
+#jevents_body .ev_td_left{
+    background-color: rgba(249, 249, 249, 0.5)
+}

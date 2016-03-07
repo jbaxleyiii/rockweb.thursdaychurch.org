@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fields name="General">
+		<field name="profile_default" type="profile" label="Default Profile" description="Select the profile which should be loaded by default." />
+		<field name="profile_dynamic" type="radio" default="1" label="Dynamic Profiles" description="Allow profiles to be loaded by URL.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="compression" type="list" default="0" label="Compression" description="Minify and combine CSS and JavaScript into a single file. Use gzip compression and Data URIs to reduce image file requests.">
+			<option value="0">None</option>
+			<option value="1">Combination + Minify</option>
+			<option value="2">Combination + Minify + Data URIs</option>
+			<option value="3">Combination + Minify + Data URIs + Gzip</option>
+		</field>
+	  
+		<field name="verify" type="verify" label="Verify Files" description="Detect and show all file modifications." />
+
+		<field name="System" type="separator" />
+		<field name="totop_scroller" type="radio" default="1" label="Back-To-Top Scroller" description="Show the back-to-top scroller.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="warp_branding" type="radio" default="1" label="Warp Branding" description="Show the Warp branding.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="ie6page" type="radio" default="1" label="Upgrade Page" description="Redirect outdated browsers to the upgrade page.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="check" type="check" label="System Check" description="Detects system issues." />
+		<field name="Social" type="separator" />
+		<field name="twitter" type="radio" default="0" label="Twitter Button" description="Display a Tweet button in your articles.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="plusone" type="radio" default="0" label="Google+ Button" description="Display a Google+ button in your articles.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="facebook" type="radio" default="0" label="Facebook Button" description="Display a facebook like button in your articles.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="Fonts" type="separator" />
+		<field name="google_font_subset" type="text" size="10" default="" label="Google Fonts Subset" description="set the Google Fonts subset to use with google fonts. Example, you can type 'subset=cyrillic,cyrillic-ext' to enable cyrillic text for russian letters. Please note this also depends on whether the font supports the subset characters. For more information visit: www.google.com/fonts/" class="long" />
+
+	</fields>
+	<fields name="Profiles">
+		<field name="Style" type="separator" />
+		<field name="style" type="styles" label="Color Scheme" description="Select the color scheme variation to attach to the selected profile." />
+		<field name="bg_texture" type="list" default="bg_texture_1" label="Site Background" description="Select the background texture or color for your site.">
+			<option value="bg_texture_0">Color</option>
+			<option value="bg_texture_1">Vertical lines</option>
+			<option value="bg_texture_2">Wall Plaster</option>
+			<option value="bg_texture_3">Table cloth</option>
+			<option value="bg_texture_4">Oil painting</option>
+			<option value="bg_texture_5">Jeans</option>
+			<option value="bg_texture_6">Small boxes</option>
+			<option value="bg_texture_11">Ply wood</option>
+			<option value="bg_texture_12">Sepia floor</option>
+			<option value="bg_texture_13">Wooden Fence</option>
+			<option value="bg_texture_15">Leather</option>
+			<option value="bg_texture_16">Grunge Wall</option>
+			<option value="bg_texture_17">Dark Vertical Lines</option>
+			<option value="bg_texture_18">Dark Cross-section</option>
+			<option value="bg_texture_19">Linen</option>
+			<option value="bg_texture_20">Mahogany</option>
+			<option value="bg_texture_21">Vintage Wood</option>
+			<option value="bg_texture_22">Darkwood vertical</option>
+			<option value="bg_texture_23">Darkwood horizontal</option>
+			<option value="bg_texture_24">Custom Background</option>
+		</field>
+		<field name="main_texture" type="list" default="main_texture_0" label="Main Content Background" description="Select the background texture or color for the main body and content.">
+			<option value="main_texture_0">Color</option>
+			<option value="main_texture_1">Brown Grunge</option>
+			<option value="main_texture_2">Ecru Grunge</option>
+			<option value="main_texture_3">Bluegrey Grunge</option>
+			<option value="main_texture_4">Grey Grunge</option>
+			<option value="main_texture_5">Transparent</option>
+		</field>
+		<field name="comp_texture" type="list" default="comp_texture_1" label="Component Overlay" description="Select the background overlay for the showcase gradient, colored sidebar menu and colored block module.">
+			<option value="comp_texture_0">Transparent</option>
+			<option value="comp_texture_1">Leather</option>
+			<option value="comp_texture_2">Small Boxes</option>
+			<option value="comp_texture_3">Vertical Lines</option>
+			<option value="comp_texture_4">Horizontal Lines</option>
+			<option value="comp_texture_5">Thick Horizontal Lines</option>
+			<option value="comp_texture_6">Diagonal Lines</option>
+			<option value="comp_texture_7">Vintage Boxes</option>
+		</field>
+		<field name="element_gradient" type="list" default="element_grad_1" label="Element gradient" description="Select the element gradient color headers, alternating rows and alternating lists.">
+			<option value="element_grad_1">Beige</option>
+			<option value="element_grad_2">White</option>
+		</field>
+		<field name="footer_texture" type="list" default="footer_texture_1" label="Footer Background" description="Select the background texture or color for the footer section (bottom-c and bottom-d positions).">
+			<option value="footer_texture_0">Color</option>
+			<option value="footer_texture_1">Ply wood</option>
+			<option value="footer_texture_2">Sepia floor</option>
+			<option value="footer_texture_3">Wooden Fence</option>
+			<option value="footer_texture_4">Hard Wood</option>
+			<option value="footer_texture_5">Leather</option>
+			<option value="footer_texture_6">Grunge Wall</option>
+			<option value="footer_texture_7">Dark Vertical Lines</option>
+			<option value="footer_texture_8">Dark Cross-section</option>
+			<option value="footer_texture_9">Linen</option>
+			<option value="footer_texture_10">Mahogany</option>
+			<option value="footer_texture_11">Vintage Wood</option>
+			<option value="footer_texture_12">Darkwood vertical</option>
+			<option value="footer_texture_13">Darkwood horizontal</option>
+		</field>
+		<field name="sheet_border_opacity" type="text" size="10" default="0.15" label="Dark border opacity" description="set the dark border opacity" class="short" />
+		<field name="footer_opacity" type="text" size="10" default="0.3" label="Footer opacity" description="set the footer opacity overlay for the bottom-c section" class="short" />
+		<field name="show_top_half" type="radio" default="1" label="Show top half background" description="Show the top half background section beneath the logo.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="show_rings_margin" type="radio" default="1" label="Show rings and margins" description="Show the main content binder rings and margins top/bottom of the main content.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="Content Colors" type="separator" />
+		<field name="bg_color" type="text" class="short color-pick" size="10" default="#221710" label="Site background color" description="Set the background color of the site" />
+		<field name="top_bg_color" type="text" class="short color-pick" size="10" default="#721305" label="Top Body background" description="Set the background color of the top half section right below the toolbar" />
+		<field name="top_a_from" type="text" class="short color-pick" size="10" default="#453B3B" label="Top-a Background" description="Set the top-a background color" />
+		<field name="top_a_color" type="text" class="short color-pick" size="10" default="#FFFFFF" label="Top-a font" description="Set the top-a font color" />
+		<field name="top_a_link_color" type="text" class="short color-pick" size="10" default="#EDC279" label="Top-a link" description="Set the top-a link color" />
+		<field name="content_bg_color" type="text" class="short color-pick" size="10" default="#F0EDE6" label="Main content background" description="Set the main-content section background color if the Main content background is set to 'Color' and no texture has been set" />
+		<field name="sidebar_a_bg_color" type="text" class="short color-pick" size="10" default="#DAD6C8" label="Sidebar A background" description="Set the background color of sidebar A" />
+		<field name="sidebar_b_bg_color" type="text" class="short color-pick" size="10" default="#F0EDE6" label="Sidebar B background" description="Set the background color of sidebar B" />
+		<field name="bottom_block_bg_color" type="text" class="short color-pick" size="10" default="#DAD6C8" label="Bottom block background" description="Set the background color of Bottom blocks (bottom-a and bottom-b modules)" />
+		<field name="footer_bg_color" type="text" class="short color-pick" size="10" default="#5E4236" label="Footer-section background" description="Set the footer(bottom-c) section background color" />
+		<field name="toolbar_color" type="text" class="short color-pick" size="10" default="#EAE8DE" label="Toolbar font" description="set the toolbar font color" />
+		<field name="showcase_color" type="text" class="short color-pick" size="10" default="#FFFFFF" label="Showcase font" description="set the toolbar font color" />
+		<field name="body_color" type="text" class="short color-pick" size="10" default="#403B38" label="Body font" description="set the body font color" />
+		<field name="link_color" type="text" class="short color-pick" size="10" default="#75221D" label="Normal link" description="set the normal link color" />
+		<field name="hover_color" type="text" class="short color-pick" size="10" default="#9E2C26" label="Hover link" description="set the hover link color" />
+		<field name="heading_color" type="text" class="short color-pick" size="10" default="#661D1A" label="Headings" description="set the headings color" />
+		<field name="title_span_color" type="text" class="short color-pick" size="10" default="#807069" label="Title span" description="set the color for the first word of module headings" />
+		<field name="footer_font_color" type="text" class="short color-pick" size="10" default="#D9D9D9" label="Footer font" description="set the color for the footer font color" />
+		<field name="footer_link_color" type="text" class="short color-pick" size="10" default="#EDC279" label="Footer link" description="set the color for the footer hyperlink color" />
+		<field name="footer_link_color_hover" type="text" class="short color-pick" size="10" default="#E85646" label="Footer link hover" description="set the color for the footer hyperlink hover color" />
+		<field name="overlay_bg_color" type="text" class="short color-pick" size="10" default="#9E2C26" label="Overlay background" description="Set the overlay background color used on mod-overlay module styling" />
+		<field name="overlay_opacity" type="text" size="10" default="0.75" label="Overlay opacity" description="set the overlay opacity for the overlay background" class="short" />
+		<field name="overlay_color" type="text" class="short color-pick" size="10" default="#FFFFFF" label="Overlay font" description="set the overlay font color" />
+
+		<field name="Button Colors" type="separator" />
+		<field name="button_bg_color" type="text" class="short color-pick" size="10" default="#721305" label="Button background" description="set the background color of the colored button" />
+		<field name="button_color" type="text" class="short color-pick" size="10" default="#F0EFED" label="Button font" description="set the font color of the button" />
+		<field name="light_button_bg_color" type="text" class="short color-pick" size="10" default="#6E605A" label="Light Button background" description="set the background color of the light colored button" />
+		<field name="light_button_color" type="text" class="short color-pick" size="10" default="#FFFFFF" label="Light Button font" description="set the font color of the light colored button" />
+		
+		<field name="Horizontal Menu" type="separator" />
+		<field name="menu_header_color" type="text" class="short color-pick" size="10" default="#807069" label="Menu header" description="set the background color of the menu header" />
+		<field name="menu_bg_color" type="text" class="short color-pick" size="10" default="#807069" label="Dropdown menu background" description="set the background color of the dropdown menu " />
+		<field name="menu_item_bg_hover_color" type="text" class="short color-pick" size="10" default="#3D3534" label="Menu item hover background" description="set the background color of the  dropdown menu item when hovered over" />
+		<field name="menu_item_font_hover_color" type="text" class="short color-pick" size="10" default="#FFFFFF" label="Menu item hover font" description="set the font color of the  dropdown menu item when hovered over" />
+		<field name="menu_item_bg_current_color" type="text" class="short color-pick" size="10" default="#3D3534" label="Menu item current background" description="set the background color of the current dropdown menu item" />
+		<field name="menu_item_font_current_color" type="text" class="short color-pick" size="10" default="#FFFFFF" label="Menu item current font" description="set the font color of the current dropdown menu item" />
+		<field name="menu_item_font_color" type="text" class="short color-pick" size="10" default="#FFFFFF" label="Menu item font" description="set the font color of the dropdown menu item" />
+		<field name="mobile_menu_breakpoint" type="text" size="10" default="1024" label="Mobile menu breakpoint" description="set the width in px of the breakpoint whereby the offcanvas menu button will show" class="short" />
+		
+		<field name="Vertical Menu" type="separator" />
+		<field name="vmenu_item_font_color" type="text" class="short color-pick" size="10" default="#FFFFFF" label="V-menu item font" description="set the font color of the passive vertical menu item" />
+		<field name="vmenu_item_bg_color" type="text" class="short color-pick" size="10" default="#353535" label="V-menu item background" description="set the background color of the vertical menu item" />
+		<field name="vmenu_item_hover" type="text" class="short color-pick" size="10" default="#4F1513" label="V-menu hover item background" description="set the background color of the hover/current vertical menu item" />
+		<field name="vmenu_item_font_hover_color" type="text" class="short color-pick" size="10" default="#FFFFFF" label="V-menu hover item font" description="set the font color of the hover/current vertical menu item" />
+
+		<field name="Widgets Colors" type="separator" />
+		<field name="media_track_color" type="text" class="short color-pick" size="10" default="#6E605A" label="Media track color" description="set the background color of the media track for audio and video tracks" />
+		<field name="block_color" type="text" class="short color-pick" size="10" default="#721305" label="Color-block background" description="set the background color of the color block module style" />
+		<field name="block_font_color" type="text" class="short color-pick" size="10" default="#FFFFFF" label="Color-block font color" description="set the font color of the color block module style" />
+		<field name="price_tag_background" type="text" class="short color-pick" size="10" default="#701E1B" label="Price tag background" description="set the background color of the price-tag area in the pricing tables" />
+		
+		<field name="tabs_active_button_bg" type="text" class="short color-pick" size="10" default="#AB0303" label="Tabs active button background" description="set the background color of the active tab and filterable portfolio active button" />
+		<field name="tabs_active_font_color" type="text" class="short color-pick" size="10" default="#FFFFFF" label="Tabs active font color" description="set the font color of the active tab and filterable portfolio active button" />
+		<field name="kunena_bg_color" type="text" class="short color-pick" size="10" default="#807069" label="Kunena header background" description="set the background color of the forum header" />
+
+		<field name="Uikit" type="separator" />
+		<field name="uk_primary" type="text" class="short color-pick" size="10" default="#559FCF" label="Primary background" description="set the 'primary' background color for badges, progress-bar and buttons" />
+		<field name="uk_success" type="text" class="short color-pick" size="10" default="#99B11C" label="Success background" description="set the 'success' background color for badges, progress-bar and buttons" />
+		<field name="uk_warning" type="text" class="short color-pick" size="10" default="#FFA322" label="Warning background" description="sset the 'warning' background color for badges, progress-bar and buttons" />
+		<field name="uk_danger" type="text" class="short color-pick" size="10" default="#D32B2B" label="Danger background" description="set the 'danger' background color for badges, progress-bar and buttons" />
+
+		<field name="Fonts" type="separator" />
+			<field name="font2" type="list" default="patuaone" label="Header Font" description="Select the headings typeface.">
+			<option value="arial">Arial</option>
+			<option value="equip">Equip</option>
+			<option value="georgia">Georgia</option>
+			<option value="lucida">Lucida</option>
+			<option value="timesnewroman">Times New Roman</option>
+			<option value="trebuchet">Trebuchet</option>
+			<option value=""></option>
+			<option value="">------- google web fonts -------</option>
+			<option value="droidsans">Droid Sans</option>
+			<option value="economica">Economica</option>
+			<option value="gudea">Gudea</option>
+			<option value="kreon">Kreon</option>
+			<option value="lato">Lato</option>
+			<option value="league">League Gothic</option>
+			<option value="marvel">Marvel</option>
+			<option value="mavenpro">Maven Pro</option>
+			<option value="notosans">Noto Sans</option>
+			<option value="opensans">Open Sans</option>
+			<option value="opensans-condlight">Open Sans Condensed</option>
+			<option value="patuaone">Patua One</option>
+			<option value="play">Play</option>
+			<option value="raleway">Raleway</option>
+			<option value="roboto">Roboto</option>
+			<option value="robotoslab">Roboto Slab</option>
+			<option value="ropasans">Ropa Sans</option>
+			<option value="yanonekaffeesatz">Yanone Kaffeesatz</option>
+		</field>
+
+		<field name="font1" type="list" default="equip" label="Body Font" description="Select the main body typeface.">
+			<option value="arial">Arial</option>
+			<option value="equip">Equip</option>
+			<option value="georgia">Georgia</option>
+			<option value="lucida">Lucida</option>
+			<option value="timesnewroman">Times New Roman</option>
+			<option value="trebuchet">Trebuchet</option>
+			<option value=""></option>
+			<option value="">------- google web fonts -------</option>
+			<option value="droidsans">Droid Sans</option>
+			<option value="gudea">Gudea</option>
+			<option value="lato">Lato</option>
+			<option value="notosans">Noto Sans</option>
+			<option value="opensans">Open Sans</option>
+			<option value="opensans-condlight">Open Sans Condensed</option>
+			<option value="raleway">Raleway</option>
+			<option value="roboto">Roboto</option>
+			<option value="robotoslab">Roboto Slab</option>
+
+		</field>
+	
+		<field name="font3" type="list" default="equip" label="Menu Font" description="Select the menu typeface.">
+			<option value="arial">Arial</option>
+			<option value="colaborate">Colaborate</option>
+			<option value="equip">Equip</option>
+			<option value="georgia">Georgia</option>
+			<option value="lucida">Lucida</option>
+			<option value="timesnewroman">Times New Roman</option>
+			<option value="trebuchet">Trebuchet</option>
+			<option value=""></option>
+			<option value="">------- google web fonts -------</option>
+			<option value="droidsans">Droid Sans</option>
+			<option value="economica">Economica</option>
+			<option value="gudea">Gudea</option>
+			<option value="kreon">Kreon</option>
+			<option value="lato">Lato</option>
+			<option value="marvel">Marvel</option>
+			<option value="mavenpro">Maven Pro</option>
+			<option value="notosans">Noto Sans</option>
+			<option value="opensans">Open Sans</option>
+			<option value="opensans-condlight">Open Sans Condensed</option>
+			<option value="patuaone">Patua One</option>
+			<option value="play">Play</option>
+			<option value="raleway">Raleway</option>
+			<option value="roboto">Roboto</option>
+			<option value="robotoslab">Roboto Slab</option>
+			<option value="ropasans">Ropa Sans</option>
+			<option value="yanonekaffeesatz">Yanone Kaffeesatz</option>
+		</field>
+
+		<field name="Content" type="separator" />
+		<field name="date" type="radio" default="0" label="Date" description="Show the date.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="system_output" type="radio" default="1" label="System Output" description="Show the system output.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="Layout" type="separator" />
+		<field name="responsive" type="radio" default="1" label="Responsive Layout" description="Enable responsive layout.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="template_width" type="text" size="10" default="1280" label="Template Width" description="Set the template width in pixel." class="short" />
+		<field name="sidebar-a_width" type="text" size="10" default="30" label="Sidebar A Width" description="Set the Sidebar A width in percent." class="short" />
+		<field name="sidebar-b_width" type="text" size="10" default="30" label="Sidebar B Width" description="Set the Sidebar B width in percent." class="short" />
+		<field name="sidebar-a" type="list" default="left" label="Sidebar A Position" description="Align the sidebar to the left or right.">
+			<option value="right">Right</option>
+			<option value="left">Left</option>
+		</field>
+		<field name="sidebar-b" type="list" default="right" label="Sidebar B Position" description="Align the sidebar to the left or right.">
+			<option value="right">Right</option>
+			<option value="left">Left</option>
+		</field>
+		<field name="top-a" type="layout" default="equal" label="Top A Layout" description="Select a grid layout for this module position." />
+		<field name="top-b" type="layout" default="equal" label="Top B Layout" description="Select a grid layout for this module position." />
+		<field name="innertop-a" type="layout" default="equal" label="Inner Top A Layout" description="Select a grid layout for this module position." />
+		<field name="innertop-b" type="layout" default="equal" label="Inner Top B Layout" description="Select a grid layout for this module position." />
+		<field name="innerbottom-a" type="layout" default="equal" label="Inner Bottom A Layout" description="Select a grid layout for this module position." />
+		<field name="innerbottom-b" type="layout" default="equal" label="Inner Bottom B Layout" description="Select a grid layout for this module position." />
+		<field name="bottom-a" type="layout" default="equal" label="Bottom A Layout" description="Select a grid layout for this module position." />
+		<field name="bottom-b" type="layout" default="equal" label="Bottom B Layout" description="Select a grid layout for this module position." />
+		<field name="bottom-c" type="layout" default="equal" label="Bottom C Layout" description="Select a grid layout for this module position." />
+		<field name="reveal-a" type="layout" default="equal" label="Reveal A Layout" description="Select a grid layout for this reveal-a position." />
+		<field name="reveal-b" type="layout" default="equal" label="Reveal B Layout" description="Select a grid layout for this reveal-b position." />
+		<field name="reveal-c" type="layout" default="equal" label="Reveal C Layout" description="Select a grid layout for this reveal-c position." />
+		<field name="menu_width" type="text" size="10" default="250" label="Drop Down Column Width" description="Set the column width of the drop down menu in pixel." class="short" />
+	</fields>
+
+	<fields name="Custom">
+		<field name="custom_css" type="textarea" rows="8" cols="30" label="Custom CSS" description="Insert your custom css to be included in the head section." />
+		<field name="tracking_code" type="textarea" rows="8" cols="30" label="Tracking Code" description="Insert your Google Analytics tracking code." />
+		<field name="custom_js" type="textarea" rows="8" cols="30" label="Custom Javascript" description="Insert your custom javascript to be included in the footer section." />
+	</fields>
+</config>

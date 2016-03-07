@@ -1,0 +1,209 @@
+/*!
+ * SlickNav Responsive Mobile Menu v1.0.3
+ * (c) 2015 Josh Cope
+ * licensed under MIT
+ */
+
+.slicknav_btn {
+  position: relative;
+	top: 7px;
+  display: block;
+  vertical-align: middle;
+  float: right;
+  padding: 0.438em 0.625em 0.438em 0.625em;
+  line-height: 1.125em;
+  cursor: pointer; }
+  .slicknav_btn .slicknav_icon-bar + .slicknav_icon-bar {
+    margin-top: 0.188em; }
+
+.slicknav_menu {
+	min-height: 60px;
+	font-size: 12px;
+  *zoom: 1; }
+  .slicknav_menu .slicknav_menutxt {
+    display: block;
+    line-height: 1.188em;
+    float: left; }
+  .slicknav_menu .slicknav_icon {
+    float: left;
+    margin: 0; }
+  .slicknav_menu .slicknav_no-text {
+    margin: 0; }
+  .slicknav_menu .slicknav_icon-bar {
+    display: block;
+    width: 1.125em;
+    height: 0.125em;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25); }
+  .slicknav_menu:before {
+    content: " ";
+    display: table; }
+  .slicknav_menu:after {
+    content: " ";
+    display: table;
+    clear: both; }
+#mobileMenuTarget{
+	display: none;	
+}
+#mobileMenu, #mobileProfile{
+	display: none;	
+}
+@media (max-width: 1279px){
+	#mobileMenuTarget{
+		display: block;	
+	}
+}
+
+.slicknav_nav {
+  clear: both;
+}
+  .slicknav_nav ul {
+    display: block; }
+  .slicknav_nav li {
+    display: block; }
+  .slicknav_nav .slicknav_arrow {
+    font-size: 0.8em;
+    margin: 0 0 0 0.4em; }
+  .slicknav_nav .slicknav_item {
+    cursor: pointer; }
+    .slicknav_nav .slicknav_item a {
+      display: inline; }
+  .slicknav_nav .slicknav_row {
+    display: block; }
+  .slicknav_nav a {
+    display: block; }
+  .slicknav_nav .slicknav_parent-link a {
+    display: inline; }
+
+.slicknav_brand {
+  float: left; }
+
+.slicknav_menu {
+  font-size: 16px;
+  box-sizing: border-box;
+  background: #000;
+  padding: 0px; }
+  .slicknav_menu * {
+    box-sizing: border-box; }
+  .slicknav_menu .slicknav_menutxt {
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0 1px 3px #000; }
+  .slicknav_menu .slicknav_icon-bar {
+    background-color: #fff; }
+
+.slicknav_btn {
+    margin: 5px 15px 0px 0px;
+    padding: 10px 12px;
+  text-decoration: none;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  background-color: #000;
+	border: 1px solid #707372;
+}
+
+.slicknav_btn:hover {
+	background: #9fbb99;
+}
+
+.slicknav_nav {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  font-size: 0.875em;
+  list-style: none;
+  overflow: hidden;
+	position: relative;
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding: 0px;
+	padding: 15px 0;
+	max-height: 500px;
+	top: 10px;
+}
+  .slicknav_nav ul {
+    list-style: none;
+    overflow: hidden;
+    padding: 0;
+    margin: 0 0 0 20px; }
+  .slicknav_nav .slicknav_row {
+    padding: 5px 10px;
+    margin: 2px 5px; }
+    .slicknav_nav .slicknav_row:hover {
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      border-radius: 6px;
+      background: #ccc;
+      color: #fff; }
+  .slicknav_nav a {
+    padding: 5px 10px;
+    margin: 2px 5px;
+    text-decoration: none;
+	  font-size: 1.2599em;
+    color: #fff; }
+    .slicknav_nav a:hover {
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      border-radius: 6px;
+      background: #ccc;
+      color: #222; }
+	.slicknav_nav a:focus {
+		outline: none;
+	}
+  .slicknav_nav .slicknav_txtnode {
+    margin-left: 15px; }
+  .slicknav_nav .slicknav_item a {
+    padding: 0;
+    margin: 0; }
+  .slicknav_nav .slicknav_parent-link a {
+    padding: 0;
+    margin: 0; }
+
+.slicknav_brand {
+  color: #fff;
+  font-size: 18px;
+  line-height: 30px;
+  padding: 7px 12px;
+  height: 44px; }
+
+
+.slicknav_nav *{
+	font-size: 1em !important;
+}
+
+.slicknav_nav .slicknav_parent {
+}
+@media (max-width: 767px){
+	.LVL1{
+		border-bottom: #707372 solid 1px;
+	}
+	.slicknav-footer{
+		text-align: center;
+		padding: 8px;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+@media (min-width: 768px){
+	#menu{
+		display: none;
+	}
+	.slicknav-footer{
+		display: none;
+	}
+}
+
+.mobile-help{
+	color: #707372;
+}
+
+.mobileGrey{
+	background-color: #333332;
+}
+.mobileGrey a {
+	margin: 0px !important;
+}

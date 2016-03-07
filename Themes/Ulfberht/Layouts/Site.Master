@@ -1,0 +1,252 @@
+<%@ Master Language="C#" AutoEventWireup="true" Inherits="Rock.Web.UI.RockMasterPage" %>
+<%@ Import Namespace="System.Web.Optimization" %>
+<!DOCTYPE html>
+
+<script runat="server">
+    
+    // keep code below to call base class init method
+
+    /// <summary>
+    /// Raises the <see cref="E:System.Web.UI.Control.Init" /> event.
+    /// </summary>
+    /// <param name="e">An <see cref="T:System.EventArgs" /> object that contains the event data.</param>
+    protected override void OnInit( EventArgs e )
+    {
+        base.OnInit( e );
+    }    
+    
+</script>
+
+<html class="no-js" lang="en">
+<head runat="server">
+	
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+
+	
+	
+	<script src="<%# ResolveRockUrl("~/Scripts/jquery-1.10.2.min.js", false) %>"></script>
+
+    <!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <asp:ContentPlaceHolder ID="css" runat="server" />
+
+	
+	<!-- Included CSS Files -->
+	<link rel="stylesheet" href="<%# ResolveRockUrl("~~/Styles/bootstrap.css", false) %>"/>
+	<link rel="stylesheet" href="<%# ResolveRockUrl("~~/Styles/RockUtils.css", false) %>"/>
+	<link rel="stylesheet" href="<%# ResolveRockUrl("~/Styles/developer.css", false) %>"/>
+	<link rel="stylesheet" href="<%# ResolveRockUrl("~~/Styles/style.css", true) %>"/>
+    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7260332/771266/css/fonts.css" />
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    	<!--<script src="//use.typekit.net/mmd0syh.js"></script> 
+	<script>try{Typekit.load();}catch(e){}</script> -->
+    <script src="<%# ResolveRockUrl("~/Scripts/modernizr.js", false) %>" ></script>
+	<script src="<%# ResolveRockUrl("~~/assets/js/jquery.fitvids.js", false) %>"></script>
+	<script src="<%# ResolveRockUrl("~~/js/CazHome.js", false) %>"></script>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	
+	<!-- Slicknav stuff -->
+<!--	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+	<link rel="stylesheet" href="<%# ResolveRockUrl("~~/Styles/slicknav.css", true) %>"/>
+	<script src="<%# ResolveRockUrl("~~/js/jquery.slicknav.js", true) %>"></script>
+
+	
+<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+
+    <!-- Icons -->
+    <link rel="shortcut icon" href="<%# ResolveRockUrl("~~/img/favicon.ico", false) %>">
+   <!-- /*<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<%# ResolveRockUrl("~/Assets/Icons/touch-icon-ipad-retina.png", true) %>">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<%# ResolveRockUrl("~/Assets/Icons/touch-icon-iphone-retina.png", true) %>">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<%# ResolveRockUrl("~/Assets/Icons/touch-icon-ipad.png", true) %>">
+    <link rel="apple-touch-icon-precomposed" href="<%# ResolveRockUrl("~/Assets/Icons/touch-icon-iphone.png", true) %>"> -->
+    
+</head>
+<body>
+
+    <form id="form1" runat="server">
+        <!-- Page Header -->
+        <header>
+        
+            <!-- Brand Bar -->
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container-fluid">					
+					<!--<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						 <a class="navbar-brand" href="#"></a> 
+					</div>-->
+					
+					<div class="Central-logo">
+						<a alt="Home" href="/"><img src="//cdn.brandisty.com/img?id=543855028049b5681400026e&format=png&w=600&h=372" onerror="this.onerror=null; this.src='error.png'" style="height:30px;"></a>
+							
+						</div>
+						<div id="mobileMenuTarget"></div>
+			       	
+<!--		removing navbarcollapse
+                    <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">   						       	
+-->
+                    <div class="navbar-collapse collapse">   			
+						
+                        <!-- Main Navigation -->
+                        <div class="ul-container">
+							
+							<div class="nav navbar-nav navbar-main">
+								<Rock:Zone Name="Navigation" runat="server" />			
+							</div>
+							<ul class="nav navbar-nav navbar-secondary">
+								<Rock:Zone Name="Login" runat="server" />
+							</ul>
+								
+						</div> 
+			        </div>
+
+                    <div id="search">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+						<input type="text" class="searchBar" placeholder="What are you looking for?">
+                    </div>
+						<input type="text" id="searchBar"  class="searchBarMbl" placeholder="What are you looking for?">
+                </div>
+            </nav>
+
+        </header>
+		
+        <asp:ContentPlaceHolder ID="feature" runat="server"></asp:ContentPlaceHolder>
+
+        <asp:ContentPlaceHolder ID="main" runat="server"></asp:ContentPlaceHolder>
+
+	    <footer  class="container-fluid site-footer">
+			<div class="col-xs-6 col-md-2 col-md-offset-1">
+			<ul>
+				<Rock:Zone Name="Footer1" runat="server" />
+				<li class="footer-header">Learn</li>
+				<li><a href="/Jesus-Baptism">Who is Jesus?</a></li>
+				<li><a href="/About">What We Believe</a></li>
+				<li><a href="#">Our Purpose</a></li>
+			</ul>
+		</div>
+			
+		<div class="col-xs-6 col-md-2">
+			<ul>
+				<Rock:Zone Name="Footer2" runat="server" />
+				<li class="footer-header">Visit</li>
+				<li><a href="/Locations-Times">Locations &amp; Times</a></li>
+				<li><a href="/page/211">What to Expect</a></li>
+				<li><a href="#">Our Leadership</a></li>
+				<li><a href="#">Upcoming Events</a></li>
+				<li><a href="#">Calendar</a></li>
+			</ul>
+		</div>
+			
+		<div class="col-xs-6 col-md-2">
+			<ul>
+				<Rock:Zone Name="Footer3" runat="server" />
+				<li class="footer-header">Resources</li>
+				<li><a href="http://media.centralaz.com/">Recent</a></li>
+				<li><a href="http://media.centralaz.com/category/weekend-messages/">Sermon Series</a></li>
+				<li><a href="#">Business Directory</a></li>
+				<li><a href="#">Music</a></li>
+				<li><a href="#">Event Media</a></li>
+				<li><a href="#">Devotionals</a></li>
+			</ul>
+		</div>
+			
+		<div class="col-xs-6 col-md-2">
+			<ul>
+				<Rock:Zone Name="Footer4" runat="server" />
+				<li class="footer-header">Connect</li>
+				<li><a href="#">Life Groups</a></li>
+				<li><a href="#">Community</a></li>
+				<li><a href="#">Care</a></li>
+				<li><a href="#">Equip</a></li>
+				<li><a href="#">Careers</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</div>
+			
+		<div class="col-xs-12 col-md-2">
+			<nav class="social-nav">
+				<a href="https://www.facebook.com/CentralAZ" class="social-facebook"></a>
+				<a href="https://twitter.com/centralaz" class="social-twitter"></a>
+				<a href="https://instagram.com/centralchristianaz/" class="social-instagram"></a>
+				<a href="http://media.centralaz.com/"><i class="fa fa-film social-video"></i></a>
+				<a href="http://blog.centralaz.com/"><i class="fa fa-comments social-video"></i></a>
+			</nav>
+			<div class="footer-location"><span class="az-icon"></span>Phoenix, AZ</div>
+		</div>
+	    </footer>
+		<script> 
+			$(document).ready(function(){
+				var $profile = $('#mobileProfile').children();
+				$('#mobileProfile').remove();
+				$( "#mobileMenu" ).prepend( $profile );
+			}); 
+			/* mobile Nav Jquery*/
+			$(document).ready(function(){
+				$('#mobileMenu').slicknav({
+					label: '',
+					duration: 515,
+					prependTo:'#mobileMenuTarget',
+					duplicate: false
+					});
+			});
+			$('#search').click(function() {
+				if ($(window).width() <= 1280){
+				$('#searchBar').toggle("medium");
+				}
+			});
+		</script>
+				
+		<!--Start of Zopim Live Chat Script-->
+		<script type="text/javascript">
+			$(document).ready(function(){
+				if( $('#cms-admin-footer').length ){}
+				else
+				{
+					window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+					d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+					_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
+					$.src='//v2.zopim.com/?DiT33K121qw1hltnghgwMQBK0paaHNdJ';z.t=+new Date;$.
+					type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
+						$zopim(function() {
+						$zopim.livechat.bubble.setColor('#9fbb99');
+						$zopim.livechat.theme.reload();
+					  });
+				}
+			}); 
+
+		</script>
+		<!--End of Zopim Live Chat Script-->
+        
+		<%-- controls for scriptmanager and update panel --%>
+        <asp:ScriptManager ID="sManager" runat="server"/>
+        <asp:UpdateProgress id="updateProgress" runat="server" DisplayAfter="800">
+		        <ProgressTemplate>
+		            <div class="updateprogress-status">
+                        <div class="spinner">
+                          <div class="rect1"></div>
+                          <div class="rect2"></div>
+                          <div class="rect3"></div>
+                          <div class="rect4"></div>
+                          <div class="rect5"></div>
+                        </div>
+                    </div>
+                    <div class="updateprogress-bg modal-backdrop"></div>
+		        </ProgressTemplate>
+        </asp:UpdateProgress>
+    </form>
+</body>
+
+</html>
