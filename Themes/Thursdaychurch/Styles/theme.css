@@ -1,43 +1,4 @@
-/* ----------------------------------------------------------------------------
-	FONT: Colfax Web Bold
----------------------------------------------------------------------------- */
-@font-face {
-  font-family: 'colfax-web';
-  src: url('//d3n6tjerleuu41.cloudfront.net/fonts/colfax/bold.eot');
-  src: url('//d3n6tjerleuu41.cloudfront.net/fonts/colfax/bold.eot?#iefix') format('embedded-opentype'), url('//d3n6tjerleuu41.cloudfront.net/fonts/colfax/bold.woff') format('woff');
-  font-style: normal;
-  font-weight: 700;
-}
-/* ----------------------------------------------------------------------------
-	FONT: Colfax Web Light
----------------------------------------------------------------------------- */
-@font-face {
-  font-family: 'colfax-web';
-  src: url('//d3n6tjerleuu41.cloudfront.net/fonts/colfax/light.eot');
-  src: url('//d3n6tjerleuu41.cloudfront.net/fonts/colfax/light.eot?#iefix') format('embedded-opentype'), url('//d3n6tjerleuu41.cloudfront.net/fonts/colfax/light.woff') format('woff');
-  font-style: normal;
-  font-weight: 300;
-}
-/* ----------------------------------------------------------------------------
-	FONT: Colfax Web Medium
----------------------------------------------------------------------------- */
-@font-face {
-  font-family: 'colfax-web';
-  src: url('//d3n6tjerleuu41.cloudfront.net/fonts/colfax/medium.eot');
-  src: url('//d3n6tjerleuu41.cloudfront.net/fonts/colfax/medium.eot?#iefix') format('embedded-opentype'), url('//d3n6tjerleuu41.cloudfront.net/fonts/colfax/medium.woff') format('woff');
-  font-style: normal;
-  font-weight: 500;
-}
-/* ----------------------------------------------------------------------------
-	FONT: Colfax Web Regular
----------------------------------------------------------------------------- */
-@font-face {
-  font-family: 'colfax-web';
-  src: url('//d3n6tjerleuu41.cloudfront.net/fonts/colfax/regular.eot');
-  src: url('//d3n6tjerleuu41.cloudfront.net/fonts/colfax/regular.eot?#iefix') format('embedded-opentype'), url('//d3n6tjerleuu41.cloudfront.net/fonts/colfax/regular.woff') format('woff');
-  font-style: normal;
-  font-weight: 400;
-}
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 /*
 
   Rock's Core CSS
@@ -2452,13 +2413,13 @@ table.attribute-grid tr th:nth-child(3) {
   float: left;
   margin-right: 12px;
 }
-.editgroup-list li.member {
+.editfamily-list li.member {
   min-width: 200px;
 }
-.editgroup-list li.member .radio {
+.editfamily-list li.member .radio {
   margin: 0;
 }
-.editgroup-list .groupmembers h4 {
+.editfamily-list .groupmembers h4 {
   margin-bottom: 4px;
 }
 .person-content {
@@ -2482,7 +2443,7 @@ span.field-value {
   white-space: nowrap;
   border-radius: 4px;
 }
-.table-groupmembers .radio:first-child {
+.table-familymembers .radio:first-child {
   margin-top: 0;
 }
 #fluidbox-overlay {
@@ -2936,7 +2897,7 @@ iframe.email-body {
   34. Checkbox
   35. Follow button
   36. Range Editors
-  37. Custom Buttons
+
   xx. Misc
 */
 .picker {
@@ -3659,9 +3620,6 @@ fieldset .actions {
 .label-communicationstatus-transient {
   background-color: #567D8C;
 }
-.label-tree {
-  background-color: #d0e092;
-}
 .datepicker {
   padding: 10px;
 }
@@ -4197,7 +4155,6 @@ fieldset .actions {
   margin-bottom: 15px;
   min-width: 160px;
   border-radius: 4px;
-  min-height: 90px;
 }
 .groupmembers .member .person-image {
   border: 1px solid #92bce0;
@@ -4594,9 +4551,6 @@ ul.list-group-panel .list-group-item:first-child,
 .date-range-picker .input-group {
   margin-bottom: 6px;
 }
-.btn-copy-to-clipboard:focus {
-  outline: 0;
-}
 /*
     Used to manage styles for specific blocks.
 
@@ -4881,9 +4835,6 @@ ul.list-group-panel .list-group-item:first-child,
 }
 .is-inactive {
   opacity: .6;
-}
-.cursor-pointer {
-  cursor: pointer;
 }
 .padding-all-none {
   padding: 0 !important;
@@ -5186,7 +5137,7 @@ ul.list-group-panel .list-group-item:first-child,
   min-height: 24px !important;
   font-weight: 700 !important;
   font-size: 24px !important;
-  font-family: "colfax-web", sans-serif !important;
+  font-family: "Montserrat", sans-serif !important;
 }
 .cke_dialog_close_button {
   background-image: none !important;
@@ -5199,7 +5150,7 @@ ul.list-group-panel .list-group-item:first-child,
   color: #202020 !important;
   font-weight: 900 !important;
   font-size: 20px !important;
-  font-family: "colfax-web", sans-serif !important;
+  font-family: "Montserrat", sans-serif !important;
   margin-top: 8px;
 }
 .cke_dialog_close_button .cke_label:after {
@@ -5229,7 +5180,7 @@ a.cke_dialog_ui_button:active {
   border-radius: 4px;
   text-shadow: none !important;
   padding: 6px 2px !important;
-  font-family: "colfax-web", sans-serif !important;
+  font-family: "Montserrat", sans-serif !important;
   font-size: 16px !important;
 }
 a.cke_dialog_ui_button span {
@@ -7527,69 +7478,5 @@ body {
 }
 .panel.panel-block > .panel-body .grid.grid-panel {
   margin: 0;
-}
-a.btn, a.more-link{
-	display:inline-block;
-	color:#ffffff;
-	text-decoration:none;
-	border-radius:10px;
-	-moz-border-radius:10px;
-	-webkit-border-radius:10px;
-	padding:10px 40px 10px 10px;
-	font-weight:bold;
-	font-size:1em;
-	line-height:1em;
-	text-align:center;
-	background: #330066;
-	background-size:20px;
-	-webkit-transition: background 300ms ease-in-out;
-	-moz-transition: background 300ms ease-in-out;
-	-ms-transition: background 300ms ease-in-out;
-	-o-transition: background 300ms ease-in-out;
-	transition: background 300ms ease-in-out;
-	margin:5px 0 0 0;
-	
-}
-a.btn:hover, a.more-link:hover{
-	color: #ffffff;
-	background: #330066;
-	background-size:20px;
-	cursor:pointer;
-	text-decoration:none;
-}
-a.btn_medium{
-	display:inline-block;
-	color:#ffffff;
-	text-decoration:none;
-	border-radius:10px;
-	-moz-border-radius:10px;
-	-webkit-border-radius:10px;
-	padding:10px 40px 10px 10px;
-	font-weight:bold;
-	font-size:1.5em;
-	line-height:1em;
-	text-align:left;
-	background: #330066;
-	background-size:25px;
-	-webkit-transition: background 300ms ease-in-out;
-	-moz-transition: background 300ms ease-in-out;
-	-ms-transition: background 300ms ease-in-out;
-	-o-transition: background 300ms ease-in-out;
-	transition: background 300ms ease-in-out;
-	width:190px;
-	
-}
-a.btn_medium:hover{
-	background: #330066;
-	text-decoration:none;
-	color:#ffffff;
-}
-a.btn_medium.small{
-	background: #330066;
-}
-a.btn_medium.small:hover{
-	background: #330066;
-	text-decoration:none;
-	color:#ffffff;
 }
 /*#endregion */
