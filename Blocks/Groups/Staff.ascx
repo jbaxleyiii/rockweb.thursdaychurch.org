@@ -41,13 +41,22 @@ namespace RockWeb.Plugins.org_newpointe.Staff
                 this.lblGroupName.Text = groupName;
 
                 var people = new List<PersonData>();
+                
+/*
 
+		Begin Edited people.add
+	
+*/
                 foreach (var person in groupMembers)
                 {
                     person.LoadAttributes();
                     people.Add(new PersonData { Name = person.FullName, PhotoUrl = person.PhotoUrl, Position = person.GetAttributeValue("Position"), Bio = person.GetAttributeValue("Bio") });
                 }
+/*
 
+		End Edited people.add
+	
+*/
                 this.rptStaff.DataSource = people;
                 this.rptStaff.DataBind();
             }
@@ -72,13 +81,21 @@ namespace RockWeb.Plugins.org_newpointe.Staff
             var image = sender as Image;
             if (image != null) image.ImageUrl = Eval("PhotoUrl").ToString();
         }
+/*
 
+		Added the below
+	
+*/
         protected void lblBio_DataBinding(object sender, EventArgs e)
         {
             var label = sender as Label;
             if (label != null) label.Text = Eval("Bio").ToString();
         }
+/*
 
+		End
+	
+*/
         protected void rptStaff_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
             if ((e.Item.ItemIndex + 1) % 6 == 0)
@@ -113,6 +130,11 @@ namespace RockWeb.Plugins.org_newpointe.Staff
         public string Name { get; set; }
         public string Position { get; set; }
         public string PhotoUrl { get; set; }
-		public string Bio { get; set; }
+        /*
+
+		Added the below
+	
+*/
+	public string Bio { get; set; }
     }
 }
