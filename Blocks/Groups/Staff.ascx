@@ -7,27 +7,23 @@
 
     <hr />
 
-    <div class="row ">
-
     <asp:Repeater runat="server" ID="rptStaff" OnItemDataBound="rptStaff_ItemDataBound">
         <ItemTemplate>
-
-            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 text-center">
+		<div class="row card">
+            <div class="col-xs-6 col-sm-3 text-center ">
                 <asp:Image runat="server" ID="img" OnDataBinding="img_DataBinding" CssClass="staff"/>
-                <p style="color: #8bc540; font-size:18px; letter-spacing: -1px;">
-                    <asp:Label runat="server" ID="lblName" OnDataBinding="lblName_DataBinding"></asp:Label> 
-                </p>
-                <p class="small" style="margin-top: -10px; height: 40px; border-top:1px solid #efefef!important;">
+                <h2>
+                    <asp:Label runat="server" ID="lblName" OnDataBinding="lblName_DataBinding"></asp:Label>
+				</h2>
+                <h3>
                     <asp:Label runat="server" ID="lblJob" OnDataBinding="lblJob_DataBinding"></asp:Label>
-                </p>
-                <p class="small" style="margin-top: -10px; height: 40px; border-top:1px solid #efefef!important;">
-                    <asp:Label runat="server" ID="lblBio" OnDataBinding="lblBio_DataBinding"></asp:Label>
-                </p>
+				</h3>
 			</div>
+			<div class="col-md-8">
+				<h1>Staff Bio</h1>
+				<p><asp:Label runat="server" ID="lblBio" OnDataBinding="lblBio_DataBinding"></asp:Label></p>
+			</div>
+		</div>
 
-    
-
-        </ItemTemplate>
+		</ItemTemplate>
     </asp:Repeater>
-    </div>
-</div>
