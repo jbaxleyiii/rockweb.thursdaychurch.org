@@ -23,7 +23,7 @@ using Rock.SystemGuid;
 namespace RockWeb.Plugins.org_newpointe.Staff 
 {
     [DisplayName("Staff")]
-    [Category("Newpointe.org Web Blocks")]
+    [Category("thursdaychurch.org Web Blocks")]
     [Description("This block will display all members of the selected group")]
     [GroupField("Root Group", "Select the root group to use as a starting point for the tree view.", false, order: 1)]
     public partial class Staff : RockBlock
@@ -114,6 +114,6 @@ namespace RockWeb.Plugins.org_newpointe.Staff
         public string Name { get; set; }
         public string Position { get; set; }
         public string PhotoUrl { get; set; }
-		public string Bio { get; set; }
+	public string Bio { get; set; }
     }
 }
