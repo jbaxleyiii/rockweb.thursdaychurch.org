@@ -12,12 +12,9 @@
 		<div class="row card">
             <div class="col-xs-6 col-sm-3 text-center ">
                 <asp:Image runat="server" ID="img" OnDataBinding="img_DataBinding" CssClass="staff"/>
-                <h2>
-                    <asp:Label runat="server" ID="lblName" OnDataBinding="lblName_DataBinding"></asp:Label>
-				</h2>
-                <h3>
-                    <asp:Label runat="server" ID="lblJob" OnDataBinding="lblJob_DataBinding"></asp:Label>
-				</h3>
+                <h2><asp:Label runat="server" ID="lblName" OnDataBinding="lblName_DataBinding"></asp:Label></h2>
+                <h3><asp:Label runat="server" ID="lblJob" OnDataBinding="lblJob_DataBinding"></asp:Label></h3>
+		    <b><asp:Label runat="server" ID="lblName" OnDataBinding="lblEmail_DataBinding"></asp:Label></b>
 			</div>
 			<div class="col-md-8">
 				<h1>Staff Bio</h1>
