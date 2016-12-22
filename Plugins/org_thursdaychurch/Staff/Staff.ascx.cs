@@ -46,7 +46,7 @@ namespace RockWeb.Plugins.org_newpointe.Staff
                 foreach (var person in groupMembers)
                 {
                     person.LoadAttributes();
-                    people.Add(new PersonData { Name = person.FullName, PhotoUrl = person.PhotoUrl, Position = person.GetAttributeValue("Position"), Bio = person.GetAttributeValue("Bio") });
+                    people.Add(new PersonData { Name = person.FullName, PhotoUrl = person.PhotoUrl, Position = person.GetAttributeValue("Position"),Email = person.email, Bio = person.GetAttributeValue("Bio") });
                 }
 
                 this.rptStaff.DataSource = people;
