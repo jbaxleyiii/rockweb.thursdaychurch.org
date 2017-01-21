@@ -1,11 +1,11 @@
 ﻿// <copyright>
-// Copyright 2013 by the Spark Development Network
+// Copyright by the Spark Development Network
 //
-// Licensed under the Apache License, Version 2.0 (the "License");
+// Licensed under the Rock Community License (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-// http://www.apache.org/licenses/LICENSE-2.0
+// http://www.rockrms.com/license
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -112,13 +112,15 @@ namespace RockWeb.Blocks.Core
                 // Rebuild the attribute controls on postback based on group type
                 if ( pnlDetails.Visible )
                 {
-                    string locationId = PageParameter("LocationId");
-
-                    if (!String.IsNullOrEmpty(locationId))
+                    int? locationId = PageParameter( "LocationId" ).AsIntegerOrNull();
+                    if ( locationId.HasValue && locationId.Value > 0 )
                     {
-                        var location = new LocationService(new RockContext()).Get(locationId.AsInteger());
-                        location.LoadAttributes();
-                        BuildAttributeEdits(location, true);
+                        var location = new LocationService(new RockContext()).Get( locationId.Value );
+                        if ( location != null )
+                        {
+                            location.LoadAttributes();
+                            BuildAttributeEdits( location, true );
+                        }
                     }
                    
                 }
@@ -192,7 +194,7 @@ namespace RockWeb.Blocks.Core
         /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         protected void btnSave_Click( object sender, EventArgs e )
         {
-            Location location;
+            Location location = null;
 
             var rockContext = new RockContext();
             LocationService locationService = new LocationService( rockContext );
@@ -201,16 +203,19 @@ namespace RockWeb.Blocks.Core
 
             int locationId = int.Parse( hfLocationId.Value );
 
-            if ( locationId == 0 )
-            {
-                location = new Location();
-                location.Name = string.Empty;
-            }
-            else
+            if ( locationId != 0 )
             {
                 location = locationService.Get( locationId );
                 FlushCampus( locationId );
             }
+
+            if ( location == null )
+            { 
+                location = new Location();
+                location.Name = string.Empty;
+            }
+
+            string previousName = location.Name;
 
             int? orphanedImageId = null;
             if ( location.ImageId != imgImage.BinaryFileId )
@@ -243,7 +248,10 @@ namespace RockWeb.Blocks.Core
             location.GeoFence = geopFence.SelectedValue;
 
             location.IsGeoPointLocked = cbGeoPointLocked.Checked;
-            
+
+            location.SoftRoomThreshold = nbSoftThreshold.Text.AsIntegerOrNull();
+            location.FirmRoomThreshold = nbFirmThreshold.Text.AsIntegerOrNull();
+
             location.LoadAttributes( rockContext );
             Rock.Attribute.Helper.GetEditValues( phAttributeEdits, location );
 
@@ -285,6 +293,13 @@ namespace RockWeb.Blocks.Core
                 location.SaveAttributeValues( rockContext );
 
             } );
+
+            // If this is a names location (or was previouisly)
+            if ( !string.IsNullOrWhiteSpace( location.Name ) || ( previousName ?? string.Empty ) != (location.Name ?? string.Empty ) )
+            {
+                // flush the checkin config
+                Rock.CheckIn.KioskDevice.FlushAll();
+            }
 
             if ( _personId.HasValue )
             {
@@ -364,6 +379,8 @@ namespace RockWeb.Blocks.Core
 
             service.Verify( location, true );
 
+            rockContext.SaveChanges();
+
             acAddress.SetValues( location );
             geopPoint.SetValue( location.GeoPoint );
 
@@ -420,11 +437,14 @@ namespace RockWeb.Blocks.Core
             if ( !locationId.Equals( 0 ) )
             {
                 location = new LocationService( new RockContext() ).Get( locationId );
+                pdAuditDetails.SetEntity( location, ResolveRockUrl( "~" ) );
             }
 
             if ( location == null )
             {
                 location = new Location { Id = 0, IsActive = true, ParentLocationId = parentLocationId };
+                // hide the panel drawer that show created and last modified dates
+                pdAuditDetails.Visible = false;
             }
 
             editAllowed = location.IsAuthorized( Authorization.EDIT, CurrentPerson );
@@ -509,6 +529,9 @@ namespace RockWeb.Blocks.Core
             geopFence.SetValue( location.GeoFence );
 
             cbGeoPointLocked.Checked = location.IsGeoPointLocked ?? false;
+
+            nbSoftThreshold.Text = location.SoftRoomThreshold.HasValue ? location.SoftRoomThreshold.Value.ToString() : "";
+            nbFirmThreshold.Text = location.FirmRoomThreshold.HasValue ? location.FirmRoomThreshold.Value.ToString() : "";
 
             Guid mapStyleValueGuid = GetAttributeValue( "MapStyle" ).AsGuid();
             geopPoint.MapStyleValueGuid = mapStyleValueGuid;
@@ -597,6 +620,16 @@ namespace RockWeb.Blocks.Core
             if ( location.PrinterDevice != null )
             {
                 descriptionList.Add( "Printer", location.PrinterDevice.Name );
+            }
+
+            if ( location.SoftRoomThreshold.HasValue )
+            {
+                descriptionList.Add( "Threshold", location.SoftRoomThreshold.Value.ToString( "N0" ) ); ;
+            }
+
+            if ( location.FirmRoomThreshold.HasValue )
+            {
+                descriptionList.Add( "Threshold (Absolute)", location.FirmRoomThreshold.Value.ToString( "N0" ) ); ;
             }
 
             string fullAddress = location.GetFullStreetAddress().ConvertCrLfToHtmlBr();

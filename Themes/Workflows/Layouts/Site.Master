@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="Rock.Web.UI.RockMasterPage" %>
+<%@ Master Language="C#" AutoEventWireup="true" Inherits="Rock.Web.UI.RockMasterPage" %>
 
 <%@ Import Namespace="System.Web.Optimization" %>
 
@@ -45,6 +45,12 @@
     <meta charset="utf-8">
     <title></title>
 
+    <!-- Sentry -->
+    <script src="https://cdn.ravenjs.com/3.5.1/raven.min.js"></script>
+    <script type="text/javascript">
+        Raven.config("<%# Rock.Web.Cache.GlobalAttributesCache.Read().GetValue( "PublicSentryDSN" ) %>").install();
+    </script>
+
     <script type="text/javascript">var _sf_startpt = (new Date()).getTime()</script>
 
     <script src="<%# ResolveRockUrl("~/Scripts/jquery-1.10.2.min.js" ) %>"></script>
@@ -66,6 +72,9 @@
     <link rel="stylesheet" href="<%# ResolveRockUrl("~~/Styles/junction.css", true) %>" />
 
     <script src="<%# ResolveRockUrl("~/Scripts/modernizr.js" ) %>"></script>
+    
+    <!-- jQuery -->
+    <script src="<%# ResolveRockUrl("~/Scripts/jquery-1.10.2.min.js" ) %>"></script>
 
     <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
 
@@ -130,7 +139,10 @@
         </asp:UpdateProgress>
     </form>
 
+    <script src="<%# ResolveRockUrl("~/Scripts/ace/ace.js" ) %>"></script>
+
     <script>
+
         // Chartbeat Analytics
         var _sf_async_config = { uid: 36438, domain: '<asp:Literal ID="siteUrl" runat="server" />', useCanonical: true };
         (function () {

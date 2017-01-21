@@ -5125,3 +5125,99 @@ footer .footer-address {
     margin: 30px 0;
   }
 }
+
+/* Landing Page - Department Selector Fixes */
+
+.page-content {
+  /* background-color:;*/
+}
+
+.icon-box {
+
+  margin-bottom: 30px;
+  margin-top: 30px;
+  border: 1px solid #dcdcdc !important;
+  border-radius: 14px;
+  background: #f7f7f7;
+  min-height: 420px;
+}
+
+.icon-box .icon {
+  color: #000;
+  font-size: 40px !important;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.icon-box-body {
+  text-align: center !important;
+  padding-top: 13px !important;
+
+}
+
+
+/*Twitter Notification Styling*/
+
+#twitter-box {
+ border-top: 1px solid #dcdcdc;
+ border-right: 1px solid #dcdcdc;
+ border-left: 2px solid #dc2a0b;
+ background-color: #F5F5F5;
+ padding-top:3%;
+ padding-left: 3%;
+ padding-right: 15px;
+ vertical-align: middle;
+ height: 120px !important;
+ margin-top: 15px;
+ -moz-box-shadow: 0 5px 13px #ccc;
+  -webkit-box-shadow: 0 5px 13px #ccc;
+  box-shadow: 0 5px 13px #ccc;
+}
+
+.landing-title {
+margin-top: 15px;
+font-size: 30px !important;
+text-transform: none;
+padding-bottom: 5px;
+background-color: #B9252D;
+padding-left: 1%;
+color: #fff !important;
+font-family: lato !important;
+font-weight: 300 !important
+}
+
+
+.department-btn {
+  display: block;
+  width: 90%;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  position: absolute;
+  bottom: 15px;
+  margin-left: 5%;
+  cursor: pointer;
+  background-color: #B9252D;
+  border: 1px solid #ccc;
+  white-space: nowrap;
+  padding: 12px 24px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 6px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.icon-box-body a {color: #fff !important;}
+.icon-box-body p {padding-bottom: 10% !important; padding-top: 10px; font-size: 13px;text-align: center; padding: 2%;}
+.icon-box-body a:hover, a:focus {
+  color: #B9252D !important;
+  text-decoration: none !important;
+  }
+ iframe {
+border:0px;
+}

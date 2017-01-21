@@ -1,4 +1,11 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="TransactionList.ascx.cs" Inherits="RockWeb.Blocks.Finance.TransactionList" %>
+
+<script type="text/javascript">
+    function clearActiveDialog() {
+        $('#<%=hfActiveDialog.ClientID %>').val('');
+    }
+</script>
+
 <asp:UpdatePanel ID="upTransactions" runat="server">
     <ContentTemplate>
 
@@ -31,6 +38,8 @@
                             <Rock:RockDropDownList ID="ddlCurrencyType" runat="server" Label="Currency Type" />
                             <Rock:RockDropDownList ID="ddlCreditCardType" runat="server" Label="Credit Card Type" />
                             <Rock:RockDropDownList ID="ddlSourceType" runat="server" Label="Source Type" />
+                            <Rock:CampusPicker ID="campCampus" runat="server" Label="Campus (of Batch)" />
+                            <Rock:PersonPicker ID="ppPerson" runat="server" Label="Person" />
                         </Rock:GridFilter>
 
                         <Rock:ModalAlert ID="mdGridWarning" runat="server" />
@@ -70,6 +79,9 @@
                     <asp:Panel ID="pnlSummary" runat="server" CssClass="panel panel-block">
                         <div class="panel-heading">
                             <h1 class="panel-title">Total Results</h1>
+                            <div class="panel-labels">
+                                <Rock:HighlightLabel ID="lbFiltered" runat="server" LabelType="Default" Visible="false" />
+                            </div>
                         </div>
                         <div class="panel-body">
                             <asp:Repeater ID="rptAccountSummary" runat="server">
@@ -92,6 +104,18 @@
             </div>
 
         </asp:Panel>
+
+        <asp:HiddenField ID="hfActiveDialog" runat="server" />
+
+        <Rock:ModalDialog ID="dlgReassign" runat="server" Title="Reassign Transactions" ValidationGroup="Reassign"
+            SaveButtonText="Reassign" OnSaveClick="dlgReassign_SaveClick" OnCancelScript="clearActiveDialog();" >
+            <Content>
+
+                <Rock:PersonPicker ID="ppReassign" runat="server" Label="Reassign Selected Transactions To" Required="true" ValidationGroup="Reassign" />
+
+            </Content>
+        </Rock:ModalDialog>
+
 
     </ContentTemplate>
 </asp:UpdatePanel>

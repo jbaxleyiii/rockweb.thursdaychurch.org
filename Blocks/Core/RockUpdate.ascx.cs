@@ -1,11 +1,11 @@
 ﻿// <copyright>
-// Copyright 2013 by the Spark Development Network
+// Copyright by the Spark Development Network
 //
-// Licensed under the Apache License, Version 2.0 (the "License");
+// Licensed under the Rock Community License (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-// http://www.apache.org/licenses/LICENSE-2.0
+// http://www.rockrms.com/license
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -134,7 +134,7 @@ namespace RockWeb.Blocks.Core
                 {
                     try
                     {
-                        if ( CheckSqlServerVersion() )
+                        if ( CheckFrameworkVersion() )
                         {
                             _isOkToProceed = true;
                         }
@@ -226,7 +226,7 @@ namespace RockWeb.Blocks.Core
                     var divPanel = e.Item.FindControl( "divPanel" ) as HtmlGenericControl;
                     
                     var requiredVersion = ExtractRequiredVersionFromTags( package );
-                    if ( requiredVersion >= _installedVersion )
+                    if ( requiredVersion <= _installedVersion )
                     {
                         lbInstall.Enabled = true;
                         lbInstall.AddCssClass( "btn-info" );
@@ -266,6 +266,42 @@ namespace RockWeb.Blocks.Core
         #endregion
 
         #region Methods
+
+        /// <summary>
+        /// Checks the .NET Framework version and returns false if not at the needed
+        /// level to proceed.
+        /// </summary>
+        /// <returns>true if ok, false otherwise</returns>
+        private bool CheckFrameworkVersion()
+        {
+            bool isOk = false;
+            try
+            {
+                // check .net
+                // .NET 4.5.2 as 4.0.30319.34000
+
+                if ( System.Environment.Version.Major > 4 )
+                {
+                    isOk = true;
+                }
+                else if ( System.Environment.Version.Major == 4 && System.Environment.Version.Build > 30319 )
+                {
+                    isOk = true;
+                }
+                else if ( System.Environment.Version.Major == 4 && System.Environment.Version.Build == 30319 && System.Environment.Version.Revision >= 34000 )
+                {
+                    // 34000 is the ".2" in 4.5.2
+                    isOk = true;
+                }
+            }
+            catch
+            {
+                // This would be pretty bad, but regardless we'll just
+                // return the isOk (not) and let the caller proceed.
+            }
+
+            return isOk;
+        }
 
         /// <summary>
         /// Checks the SQL server version and returns false if not at the needed
@@ -323,7 +359,7 @@ namespace RockWeb.Blocks.Core
                 CheckForManualFileMoves( version );
 
                 nbSuccess.Text = ConvertToHtmlLiWrappedUl( update.ReleaseNotes ).ConvertCrLfToHtmlBr();
-                lSuccessVersion.Text = update.Title;
+                lSuccessVersion.Text = GetRockVersion( update.Version );
 
                 // Record the current version to the database
                 Rock.Web.SystemSettings.SetValue( SystemSettingKeys.ROCK_INSTANCE_ID, version );
@@ -380,6 +416,32 @@ namespace RockWeb.Blocks.Core
         {
             lRockVersion.Text = string.Format( "<b>Current Version: </b> {0}", VersionInfo.GetRockProductVersionFullName() );
             lNoUpdateVersion.Text = VersionInfo.GetRockProductVersionFullName();
+        }
+
+        protected string GetRockVersion( object version )
+        {
+            var semanticVersion = version as SemanticVersion;
+            if ( semanticVersion == null )
+            {
+                semanticVersion = new SemanticVersion( version.ToString() );
+            }
+
+            if ( semanticVersion != null )
+            {
+                return "Rock " + RockVersion( semanticVersion );
+            }
+            else
+
+            return string.Empty;
+        }
+
+        protected string RockVersion( SemanticVersion version )
+        {
+            switch ( version.Version.Major )
+            {
+                case 1: return string.Format( "McKinley {0}.{1}", version.Version.Minor, version.Version.Build );
+                default: return string.Format( "{0}.{1}.{2}", version.Version.Major, version.Version.Minor, version.Version.Build );
+            }
         }
 
         /// <summary>
@@ -457,15 +519,16 @@ namespace RockWeb.Blocks.Core
         protected SemanticVersion ExtractRequiredVersionFromTags( IPackage package )
         {
             Regex regex = new Regex( @"requires-([\.\d]+)" );
-            Match match = regex.Match( package.Tags );
-            if ( match.Success )
-            {
-                return new SemanticVersion( match.Groups[1].Value );
+            if ( package.Tags != null )
+            { 
+                Match match = regex.Match( package.Tags );
+                if ( match.Success )
+                {
+                    return new SemanticVersion( match.Groups[1].Value );
+                }
             }
-            else
-            {
-                throw new ArgumentException( string.Format( "There is a malformed 'requires-' tag in a Rock package ({0})", package.Version ) );
-            }
+
+            throw new ArgumentException( string.Format( "There is a malformed 'requires-' tag in a Rock package ({0})", package.Version ) );
         }
 
         /// <summary>
@@ -754,6 +817,7 @@ namespace RockWeb.Blocks.Core
                 nbErrors.Text = string.Format( "...actually, I'm not sure what happened here: {0}", ex.Message );
             }
         }
+
         #endregion
     }
 

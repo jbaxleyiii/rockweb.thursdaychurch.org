@@ -1,0 +1,25 @@
+{% if Results.successful == true %}
+{% for result in Results.documents %}
+	{% assign url = result.fields | Last %}	
+	<a href="{{url.values | Last }}">
+	<div class="panel panel-default margin-t-md">
+		<div class="panel-heading clearfix">
+		  <h2 class="panel-title pull-left">
+			 {% assign title = result.snippets | Last %}
+			 {{title.values | Last }}
+		  </h2>
+		</div>
+		<div class="panel-body">
+			<p>         
+			{% assign content = result.snippets | First %}
+			 {{content.values | Last }}
+			 </p>
+		</div>
+	  </div>
+	</a>
+{% endfor %}
+{% assign size = Results.documents | Size %}
+{% if size == 0 %}
+<h3>No Results</h3>
+{% endif %}
+{% endif %}

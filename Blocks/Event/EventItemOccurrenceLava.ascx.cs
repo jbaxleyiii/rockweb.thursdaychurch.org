@@ -1,11 +1,11 @@
 ﻿// <copyright>
-// Copyright 2013 by the Spark Development Network
+// Copyright by the Spark Development Network
 //
-// Licensed under the Apache License, Version 2.0 (the "License");
+// Licensed under the Rock Community License (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-// http://www.apache.org/licenses/LICENSE-2.0
+// http://www.rockrms.com/license
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -130,22 +130,16 @@ namespace RockWeb.Blocks.Event
                 eventItemOccurrenceId = Convert.ToInt32( PageParameter( "EventOccurrenceId" ) );
             }
             if ( eventItemOccurrenceId > 0 )
-            {
-                bool enableDebug = GetAttributeValue( "EnableDebug" ).AsBoolean();
-
+            {                                                              
                 var eventItemOccurrenceService = new EventItemOccurrenceService( new RockContext() );
                 var qry = eventItemOccurrenceService
                     .Queryable( "EventItem, EventItem.Photo, Campus, Linkages" )
                     .Where( i => i.Id == eventItemOccurrenceId );
 
-                if ( !enableDebug )
-                {
-                    qry = qry.AsNoTracking();
-                }
                 var eventItemOccurrence = qry.FirstOrDefault();
 
                 var mergeFields = new Dictionary<string, object>();
-                mergeFields.Add( "RegistrationPage", LinkedPageUrl( "RegistrationPage", null ) );
+                mergeFields.Add( "RegistrationPage", LinkedPageRoute( "RegistrationPage" ) );
 
                 var campusEntityType = EntityTypeCache.Read( "Rock.Model.Campus" );
                 var contextCampus = RockPage.GetCurrentContext( campusEntityType ) as Campus;

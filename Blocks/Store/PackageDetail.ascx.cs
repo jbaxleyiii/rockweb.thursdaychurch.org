@@ -1,11 +1,11 @@
 ﻿// <copyright>
-// Copyright 2013 by the Spark Development Network
+// Copyright by the Spark Development Network
 //
-// Licensed under the Apache License, Version 2.0 (the "License");
+// Licensed under the Rock Community License (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-// http://www.apache.org/licenses/LICENSE-2.0
+// http://www.rockrms.com/license
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -158,7 +158,7 @@ namespace RockWeb.Blocks.Store
             lPackageDescription.Text = package.Description;
             lVendorName.Text = package.Vendor.Name;
             imgPackageImage.ImageUrl = package.PackageIconBinaryFile.ImageUrl;
-            lbPackageLink.PostBackUrl = package.SupportUrl;
+            hlPackageLink.NavigateUrl = package.SupportUrl;
             lRatingSummary.Text = string.Format( "<div class='rating rating-{0} pull-left margin-r-sm'><small></small></div>", package.Rating.ToString().Replace( ".", "" ) );
 
             lAuthorInfo.Text = string.Format( "<a href='{0}'>{1}</a>", package.Vendor.Url, package.Vendor.Name );
@@ -345,6 +345,11 @@ namespace RockWeb.Blocks.Store
                 url = url.Substring( localPath.Length );
             }
             return "http://www.rockrms.com/" + url;
+        }
+
+        protected string FormatReviewText(string reviewText )
+        {
+            return reviewText.Replace( "\r\n", "<br />" ).Replace( Environment.NewLine, "<br />" ).Replace( "\n", "<br />" );
         }
 
         #endregion

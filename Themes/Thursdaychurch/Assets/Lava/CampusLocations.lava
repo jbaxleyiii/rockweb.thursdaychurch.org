@@ -1,5 +1,4 @@
-<div class="card ">
-{% for campus in Campuses %}
+ {% for campus in Campuses %}
 
 
 {% assign active = campus.IsActive %}
@@ -30,6 +29,10 @@
       {% endfor %}
     </p>
 
+
+    
+
+
   </div>
 
   <div class="col-md-4">
@@ -55,7 +58,7 @@
       {{ campus.PhoneNumber }}
     </p>
 
-    <a href="/contact" class="seriesButton btn btn-primary">Contact the {{ campus.Name }}</a>
+    <a href="/contactus" class="seriesButton btn btn-primary">Contact the {{ campus.Name }}</a>
     
     
   </div>
@@ -64,4 +67,3 @@
 {% endif %}
 {% endif %}
 {% endfor %}
-</div>

@@ -1,0 +1,172 @@
+<%@ Master Language="C#" AutoEventWireup="true" Inherits="Rock.Web.UI.RockMasterPage" %>
+
+<%@ Import Namespace="System.Web.Optimization" %>
+
+<!DOCTYPE html>
+
+<!--
+
+  @@@   @@@@@@@@    @@@@@@@@         @@@@@@@@    @@@@@@@@    @@@@@@@@
+ @@@@  @@@@@@@@@@  @@@@@@@@@@       @@@@@@@@@@  @@@@@@@@@@  @@@@@@@@@@
+@@@!!  @@!   @@@@  @@!   @@@@       @@!   @@@@  @@!   @@@@  @@!   @@@@
+  !@!  !@!  @!@!@  !@!  @!@!@       !@!  @!@!@  !@!  @!@!@  !@!  @!@!@
+  @!@  @!@ @! !@!  @!@ @! !@!       @!@ @! !@!  @!@ @! !@!  @!@ @! !@!
+  !@!  !@!!!  !!!  !@!!!  !!!       !@!!!  !!!  !@!!!  !!!  !@!!!  !!!
+  !!:  !!:!   !!!  !!:!   !!!       !!:!   !!!  !!:!   !!!  !!:!   !!!
+  :!:  :!:    !:!  :!:    !:!  :!:  :!:    !:!  :!:    !:!  :!:    !:!
+  :::  ::::::: ::  ::::::: ::   ::  ::::::: ::  ::::::: ::  ::::::: ::
+   ::   : : :  :    : : :  :   ::    : : :  :    : : :  :    : : :  :
+
+-->
+
+<script runat="server">
+
+    // keep code below to call base class init method
+
+    /// <summary>
+    /// Raises the <see cref="E:System.Web.UI.Control.Init" /> event.
+    /// </summary>
+    /// <param name="e">An <see cref="T:System.EventArgs" /> object that contains the event data.</param>
+    protected override void OnInit( EventArgs e )
+    {
+        base.OnInit( e );
+
+        lLogoSvg.Text = System.IO.File.ReadAllText( HttpContext.Current.Request.MapPath( "~/Assets/Images/rock-logo.svg" ) );
+
+        siteUrl.Text = String.Format( Request.Url.Authority );
+
+    }
+</script>
+
+<html class="no-js">
+  <head runat="server">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <meta charset="utf-8">
+    <title></title>
+
+    <script type="text/javascript">var _sf_startpt = (new Date()).getTime()</script>
+
+    <script src="<%# ResolveRockUrl("~/Scripts/jquery-1.10.2.min.js" ) %>"></script>
+    <script src="<%# ResolveRockUrl("~/Scripts/jquery.jquery-dotimeout.js" ) %>"></script>
+
+    <!-- Typekit -->
+    <script src="//use.typekit.net/oby6bqi.js"></script>
+    <script>try { Typekit.load(); } catch (e) { }</script>
+
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <asp:ContentPlaceHolder ID="css" runat="server" />
+
+    <!-- Included CSS Files -->
+    <link rel="stylesheet" href="<%# ResolveRockUrl("~/Styles/developer.css", true) %>" />
+    <link rel="stylesheet" href="<%# ResolveRockUrl("~~/Styles/junction.css", true) %>" />
+
+    <script src="<%# ResolveRockUrl("~/Scripts/modernizr.js" ) %>"></script>
+    
+    <!-- jQuery -->
+    <script src="<%# ResolveRockUrl("~/Scripts/jquery-1.10.2.min.js" ) %>"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+
+    <!-- Icons -->
+    <link rel="shortcut icon" href="<%# ResolveRockUrl("~/Themes/NewSpring/Assets/Icons/favicon.ico", true) %>">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<%# ResolveRockUrl("~/Themes/NewSpring/Assets/Icons/apple.touch.large.png", true) %>">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<%# ResolveRockUrl("~/Themes/NewSpring/Assets/Icons/apple.touch.medium.png", true) %>">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<%# ResolveRockUrl("~/Themes/NewSpring/Assets/Icons/apple.touch.small.png", true) %>">
+    <link rel="apple-touch-icon-precomposed" href="<%# ResolveRockUrl("~/Themes/NewSpring/Assets/Icons/apple.touch.small.png", true) %>">
+  </head>
+  <body>
+
+    <form id="form1" class="hard" runat="server">
+      
+      <div class="push-double-bottom@handheld soft-bottom@handheld push-double-left@lap-and-up soft-double-left@lap-and-up"
+
+        <div class="navbar-mobile-logo" style="display: none;">
+            <asp:Literal ID="lLogoSvg" runat="server" />
+        </div>
+
+        <section class="one-whole floating soft-half locked-left locked-bottom hard-sides@lap-and-up soft-half-top@lap-and-up  sidenav">
+          <a href="//newspring.cc" class="text-light-primary floating__item soft-sides@handheld soft-half-ends@lap-and-up one-whole@lap-and-up plain">
+            <div class="floating">
+              <div class="floating__item">
+                <i class="icon-logo display-block"></i>
+                <h7 class="display-block">
+                  <small class="text-center">Home</small>
+                </h7>
+              </div>
+            </div>
+          </a>
+        </section>
+
+        <div class="newspring-wordmark">
+          <h4 class="soft-half flush text-light-primary uppercase watermark visuallyhidden@handheld">
+            NewSpring
+          </h4>
+        </div>
+
+        <div id="content-wrapper">
+
+          <div class="panel fixed@lap-and-up background--light-primary panel-push-sidenav">
+            <section class="panel__item--right hard flush transition visuallyhidden@handheld five-twelfths@lap-and-up background--fill">
+              <div class="background--fill locked-ends locked-sides hard floating" style="background-image: url('https://s3.amazonaws.com/ns.images/newspring/fpo/newspring.generic.1x2.jpg');">
+                <div class="ratio__item"></div>
+              </div>
+            </section>
+          </div>
+
+          <section class="relative hard flush-ends scrollable seven-twelfths@lap-and-up push-double-left flush@handheld soft@handheld">
+            <main class="grid">
+              <div class="soft-double@lap-and-up soft background--light-primary">
+                <div class="grid__item text-left">
+                  <div class="soft-double@lap-and-up push-double-left flush@handheld">
+                    <asp:ContentPlaceHolder ID="main" runat="server"></asp:ContentPlaceHolder>
+                  </div>
+                </div>
+              </div>
+            </main>
+          </section>
+        </div>
+
+        <%-- controls for scriptmanager and update panel --%>
+        <asp:ScriptManager ID="sManager" runat="server" />
+        <asp:UpdateProgress ID="updateProgress" runat="server" DisplayAfter="800">
+            <ProgressTemplate>
+                <div class="updateprogress-status">
+                    <div class="spinner">
+                        <div class="rect1"></div>
+                        <div class="rect2"></div>
+                        <div class="rect3"></div>
+                        <div class="rect4"></div>
+                        <div class="rect5"></div>
+                    </div>
+                </div>
+                <div class="updateprogress-bg modal-backdrop"></div>
+            </ProgressTemplate>
+        </asp:UpdateProgress>
+      </div>
+    </form>
+
+    <script src="<%# ResolveRockUrl("~/Scripts/ace/ace.js" ) %>"></script>
+
+    <script>
+
+        // Chartbeat Analytics
+        var _sf_async_config = { uid: 36438, domain: '<asp:Literal ID="siteUrl" runat="server" />', useCanonical: true };
+        (function () {
+            function loadChartbeat() {
+                window._sf_endpt = (new Date()).getTime();
+                var e = document.createElement('script');
+                e.setAttribute('language', 'javascript');
+                e.setAttribute('type', 'text/javascript');
+                e.setAttribute('src', '//static.chartbeat.com/js/chartbeat.js');
+                document.body.appendChild(e);
+            };
+            var oldonload = window.onload;
+            window.onload = (typeof window.onload != 'function') ?
+                loadChartbeat : function () { oldonload(); loadChartbeat(); };
+        })();
+    </script>
+  </body>
+</html>

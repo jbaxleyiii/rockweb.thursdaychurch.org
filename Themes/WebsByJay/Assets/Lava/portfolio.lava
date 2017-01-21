@@ -1,0 +1,11 @@
+        <div class="row card">
+{% for item in Items %}
+            <div class="col-md-4 portfolio-item">
+                    <a href="{{ LinkedPages.DetailPage }}?Item={{ item.Id }}">{{ item | Attribute:'Image' }}</a>
+                <h3>{{ item.Title }}</h3>
+                <p class="announcement-text">{{ item | Attribute:'SummaryText' }}</p>
+                <p><a class="view-details btn btn-default" href="{{ LinkedPages.DetailPage }}?Item={{ item.Id }}" role="button">View details »</a></p>
+            </div>
+{% endfor -%}
+        </div>
+        <!-- /.row -->
