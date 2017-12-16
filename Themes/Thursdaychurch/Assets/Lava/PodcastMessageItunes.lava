@@ -1,7 +1,3 @@
-<style>
-	
-</style>
-
 {% assign item = Items | First %}
 {% if item  %}
 	
