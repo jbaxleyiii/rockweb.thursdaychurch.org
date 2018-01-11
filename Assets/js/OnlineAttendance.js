@@ -1,5 +1,5 @@
 var __tracked = 0;
-  nwindow["trackVisitorCount"] = function(count) {
+  window["trackVisitorCount"] = function(count) {
         __tracked = 1;
         $(".close - reveal - modal").click();
         ga(" send ", " event ", " Online Service ", " viewer ", count.toString());
