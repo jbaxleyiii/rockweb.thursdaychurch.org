@@ -17,6 +17,6 @@
 	{% endif %}
 
 	<li>
-		<a href="http://rockweb.centralaz.com/#">Give</a>
+		<a href="/online-giving">Give</a>
 	</li>
 </ul>
