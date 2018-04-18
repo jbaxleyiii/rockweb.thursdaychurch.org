@@ -8,7 +8,7 @@
             </a>
             </h4>
         </div>
-        <div id="collapse{{item.LifegroupID}}" class="panel-collapse collapse">
+        <div id="collapse{{item.ID}}" class="panel-collapse collapse">
             <div class="panel-body">
                 <p>
     <strong>When:</strong> {{item.LGWhen }} {{item.LGWTime }}
